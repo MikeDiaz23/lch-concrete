@@ -265,10 +265,10 @@ html.tile-intro .orbit-card .tile-draft {
 .project-card img, .project-card:last-child img { height: 310px; border-radius: 14px; filter: saturate(.7); }
 .project-info { border: 0; padding: 17px 10px 8px; font-size: 11px; gap: 12px; }
 .project-info span:last-child { font-size: 9px; }
-.reviews { background: #121212; }
+.reviews { background: #121212; color: var(--ink); }
 .review-grid { grid-template-columns: .9fr 1.25fr; gap: 70px; }
 .review-grid > div:last-child { border: 1px solid #302e29; background: #191918; border-radius: 22px; padding: 28px; }
-.review-quote { font-family: Inter, sans-serif; font-size: 21px; line-height: 1.6; letter-spacing: -.02em; }
+.review-quote { color: #e7e2d9; font-family: Inter, sans-serif; font-size: 21px; line-height: 1.6; letter-spacing: -.02em; }
 .review-source { color: #959087; font-size: 10px; }
 .review-stars { font-size: 12px; letter-spacing: 3px; color: #d8b58d; }
 .review-divider { border-color: #35322c; }
