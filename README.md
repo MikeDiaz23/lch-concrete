@@ -6,7 +6,7 @@ Website source for [lchconcrete.com](https://www.lchconcrete.com), migrated from
 
 The `redesign/modern-site` branch contains a full visual redesign using the existing logo, business details, project photos, and inquiry fields. `main` retains the original migrated design. The preview server serves the currently checked-out branch.
 
-New design styles are in `site/css/modern.css`; navigation behavior is in `site/js/modern.js`. Page HTML is edited directly. See [redesign notes](docs/redesign.md).
+Base design styles are in `site/css/modern.css`; the current dark direction inspired by libraries.dev is in `site/css/studio.css`; navigation behavior is in `site/js/modern.js`. Page HTML is edited directly. See [redesign notes](docs/redesign.md).
 
 ## Work locally
 

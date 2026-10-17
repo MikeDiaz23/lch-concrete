@@ -16,3 +16,5 @@
 - `redesign/modern-site` uses `site/css/modern.css` and `site/js/modern.js` across all pages.
 - New navigation uses native details/summary dropdowns and an accessible mobile toggle; the exported runtime is retained only for gallery lightboxes.
 - Keep main as the original migration until the user accepts the redesign. Hosting remains deferred.
+
+- The current visual direction is defined in `site/css/studio.css`, loaded after `modern.css`. It uses dark surfaces, compact typography, rounded photo frames, and the existing white logo asset with red action accents. Preserve the business focus when adapting the libraries.dev reference.
