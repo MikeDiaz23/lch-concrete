@@ -19,3 +19,11 @@ Edit page HTML directly. Base layout styles are in `site/css/modern.css`; the cu
 Preview the checked-out branch at http://127.0.0.1:8000/ using the existing Python server. Refresh if an older design is cached.
 
 The earlier light editorial direction is preserved in commit `c0f5421`. No reference-site code or proprietary assets were copied. The four primary services are visible on the homepage; existing business information and inquiry fields remain.
+
+## Interactive hero surface
+
+`site/js/hero-surface.js` draws a decorative canvas behind the homepage hero. Fine angular grains suggest concrete aggregate; offset perspective seams suggest poured slabs. A slow light sweep adds ambient movement. Pointer movement gently displaces nearby grains and leaves a short finishing stroke, referring to the pass of a trowel.
+
+The canvas does not capture pointer input or block links. It caps resolution and particle count, draws at approximately 30 fps, and pauses offscreen or when the document is hidden. Reduced-motion mode draws a still surface and disables pointer animation. No dependencies or new external assets are required.
+
+Browser checks passed for ambient and pointer animation, the quote/gallery CTA hit target, offscreen pause, reduced-motion stability, animation resume, mobile/tablet overflow, and absence of runtime errors. These checks sent no inquiries.
