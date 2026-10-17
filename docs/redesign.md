@@ -39,3 +39,7 @@ Persistent warm highlights begin immediately on page load, alongside the tile in
 ## Hero typography
 
 The hero pairs a firm, slightly heavier Inter first line with a warm Georgia italic second line to distinguish concrete construction from personal craftsmanship. The service list is separated from the supporting sentence, with readable line lengths and deliberate spacing. The experience badge emphasizes the number; audience and location metadata use separate treatments below more legible action buttons. All business details remain intact. Desktop, tablet, and 320–390px phone layouts were checked for wrapping and overflow; tablet spacing keeps the copy clear of the photo tiles. Georgia is a system font, so the contrasting headline adds no font download.
+
+## Opening viewport strip
+
+The hero uses a viewport-height flex layout so its full-width highlights strip sits at the bottom of the opening browser view. The strip remains a static element in document flow and scrolls away with the page. Compact height rules adjust spacing and photo crops on shorter screens while retaining readable tile labels and all four strip items. The narrow mobile header keeps the logo and menu on one row. Browser checks cover initial bottom alignment, natural scrolling, and layout fit across desktop, tablet, and phone viewports.
