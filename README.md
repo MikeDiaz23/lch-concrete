@@ -2,6 +2,12 @@
 
 Website source for [lchconcrete.com](https://www.lchconcrete.com), migrated from the October 17, 2026 Webflow export. Make future website edits in this repository using Codex. Hosting and domain cutover are deferred.
 
+## Redesign preview
+
+The `redesign/modern-site` branch contains a full visual redesign using the existing logo, business details, project photos, and inquiry fields. `main` retains the original migrated design. The preview server serves the currently checked-out branch.
+
+New design styles are in `site/css/modern.css`; navigation behavior is in `site/js/modern.js`. Page HTML is edited directly. See [redesign notes](docs/redesign.md).
+
 ## Work locally
 
 ```sh
@@ -16,9 +22,9 @@ Open http://localhost:8000. No package installation or build framework is needed
 - `site/index.html`: homepage.
 - `site/contact.html`, `site/gallery.html`: contact and gallery pages.
 - `site/about/` and `site/services/`: remaining content pages.
-- `site/css/lch-concrete.css`: site styles.
+- `site/css/modern.css`: current redesign styles; `lch-concrete.css` retains the original export styles.
 - `site/images/`: logos, photos, responsive variants, and gallery images.
-- `site/js/lch-concrete.js`: exported interaction runtime; preserve unless deliberately replacing interactions.
+- `site/js/lch-concrete.js`: exported runtime, now used on the gallery for its lightboxes.
 - `site/js/contact-forms.js`: optional Netlify contact transport, separate from the exported runtime.
 
 The HTML, responsive styles, gallery lightboxes, animations, phone/email links, maps links, Google Fonts, and Google Analytics ID are retained. jQuery is stored locally with its original integrity hash. Social preview images use the site's own domain. See [migration notes](docs/migration.md) for verification limits and hosting-dependent features.
