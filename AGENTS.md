@@ -2,6 +2,7 @@
 
 - This repository is the source for future site edits. Do not re-export Webflow over changes.
 - Preserve the current design, responsive behavior, content, gallery, analytics, and public routes unless the user requests changes.
+- Do not use em dashes in website content. Restructure sentences with standard punctuation instead.
 - The deployable root is `site/`. Keep documentation and maintenance scripts outside it.
 - There is no framework or dependency installation. Preview using `python3 -m http.server 8000 --directory site`.
 - Run `python3 scripts/check_site.py` before committing. For interactive changes, also test affected behavior in a browser if available.
