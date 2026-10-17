@@ -26,7 +26,7 @@ body.modern a:hover { color: #fff; }
 .wrap { width: min(1080px, calc(100% - 64px)); }
 .section-space { padding: 76px 0; }
 .topline { display: none; }
-.site-header { background: #121212ee; border-bottom: 1px solid #ffffff08; }
+.site-header { background: linear-gradient(145deg, #1b1b19, #161615); border-bottom: 1px solid #2d2c29; box-shadow: inset 0 1px 0 #ffffff03; }
 .nav-row { min-height: 80px; gap: 32px; }
 .site-logo { width: 225px; }
 .site-logo img { width: 100%; height: auto; }
