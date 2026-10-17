@@ -35,3 +35,7 @@ Browser checks passed for ambient and pointer animation, the quote/gallery CTA h
 The sketch/photo handoff uses matching image bounds and a synchronized 850ms crossfade. Image decoding is attempted before the intro (with a short time limit), and the photo retains its normal sharpness and color throughout to avoid a snap at completion.
 
 Persistent warm highlights begin immediately on page load, alongside the tile intro. They travel along the exact perspective rays and slanted cross-seams of the existing background grid, sharing normalized geometry with the canvas so the angles remain aligned at every viewport size. Slow 18–27 second loops and lower contrast behind the copy keep the motion understated. Motion pauses offscreen and in hidden tabs; reduced-motion mode retains the still canvas grid.
+
+## Hero typography
+
+The hero pairs a firm, slightly heavier Inter first line with a warm Georgia italic second line to distinguish concrete construction from personal craftsmanship. The service list is separated from the supporting sentence, with readable line lengths and deliberate spacing. The experience badge emphasizes the number; audience and location metadata use separate treatments below more legible action buttons. All business details remain intact. Desktop, tablet, and 320–390px phone layouts were checked for wrapping and overflow; tablet spacing keeps the copy clear of the photo tiles. Georgia is a system font, so the contrasting headline adds no font download.
