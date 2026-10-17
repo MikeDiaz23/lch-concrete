@@ -117,6 +117,61 @@ body.modern .studio-copy > p { color: var(--muted); max-width: 420px; margin: 22
 .orbit-card img { height: 166px; width: 100%; object-fit: cover; border-radius: 14px; filter: saturate(.65); }
 .orbit-card span { display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: #b8b4ae; padding: 8px 4px 2px; }
 .orbit-card span:after { content: '›'; color: #e2d8cb; }
+.tile-draft { display: none; }
+html.tile-intro-pending .orbit-card { opacity: 0; }
+html.tile-intro .orbit-card {
+  animation: tile-frame-in 230ms ease-out var(--tile-delay) both;
+}
+html.tile-intro .orbit-card img,
+html.tile-intro .orbit-card > span:not(.tile-draft) {
+  animation: tile-photo-in 480ms cubic-bezier(.22, 1, .36, 1) calc(900ms + var(--tile-delay)) both;
+}
+html.tile-intro .orbit-card .tile-draft {
+  display: block;
+  position: absolute;
+  inset: 5px;
+  padding: 0;
+  pointer-events: none;
+  animation: tile-draft-out 400ms ease-out calc(980ms + var(--tile-delay)) both;
+}
+.orbit-card .tile-draft:after { content: none; }
+.tile-draft svg { width: 100%; height: 100%; overflow: visible; }
+.tile-draft path {
+  fill: none;
+  stroke: #baa58c;
+  stroke-width: .65;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1;
+  animation: tile-line-draw 700ms cubic-bezier(.22, 1, .36, 1) var(--tile-delay) both;
+}
+.tile-draft .tile-draft-guides { stroke: #797269; opacity: .5; stroke-width: .4; }
+.tile-draft .tile-draft-frame { animation-delay: calc(110ms + var(--tile-delay)); }
+.tile-draft .tile-draft-joints { opacity: .7; animation-delay: calc(230ms + var(--tile-delay)); }
+.tile-draft .tile-draft-caption { animation-delay: calc(340ms + var(--tile-delay)); }
+@keyframes tile-frame-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes tile-photo-in {
+  from { opacity: 0; filter: saturate(.3) blur(3px); }
+  to { opacity: 1; filter: saturate(.65) blur(0); }
+}
+@keyframes tile-draft-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes tile-line-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.tile-intro-pending .orbit-card { opacity: 1; }
+  html.tile-intro .orbit-card,
+  html.tile-intro .orbit-card img,
+  html.tile-intro .orbit-card > span { animation: none; }
+  html.tile-intro .orbit-card .tile-draft { display: none; }
+}
 .orbit-one { left: 0; top: 77px; transform: rotate(-7deg); }
 .orbit-two { right: 0; top: 125px; transform: rotate(6deg); }
 .orbit-three { left: 90px; bottom: 12px; transform: rotate(5deg); width: 175px; }

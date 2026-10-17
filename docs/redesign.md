@@ -27,3 +27,7 @@ The earlier light editorial direction is preserved in commit `c0f5421`. No refer
 The canvas does not capture pointer input or block links. It caps resolution and particle count, draws at approximately 30 fps, and pauses offscreen or when the document is hidden. Reduced-motion mode draws a still surface and disables pointer animation. No dependencies or new external assets are required.
 
 Browser checks passed for ambient and pointer animation, the quote/gallery CTA hit target, offscreen pause, reduced-motion stability, animation resume, mobile/tablet overflow, and absence of runtime errors. These checks sent no inquiries.
+
+## Hero tile entrance
+
+`site/js/hero-tiles.js` gives the four homepage tiles a staggered construction-sketch reveal on each page load. The outlines and slab joints draw first, followed by a soft photo fade, with 110ms between tiles. The sequence takes under two seconds and preserves the settled positions, tilts, and hover styles. Decorative SVG sketches are removed afterward. Any pointer, keyboard, or focus interaction skips the intro immediately. Reduced-motion preferences bypass it, and a short fallback restores visibility if the script fails to load.

@@ -26,6 +26,14 @@
 <link rel="canonical" href="https://www.lchconcrete.com/">
 <link rel="stylesheet" href="/css/modern.css">
 <link rel="stylesheet" href="/css/studio.css">
+<script>
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('tile-intro-pending');
+  window.setTimeout(function () {
+    document.documentElement.classList.remove('tile-intro-pending', 'tile-intro');
+  }, 3500);
+}
+</script>
 </head>
 <body class="modern">
 <a class="skip" href="#main">Skip to content</a>
@@ -424,6 +432,7 @@
 <script src="/js/modern.js">
 </script>
 <script src="/js/hero-surface.js"></script>
+<script src="/js/hero-tiles.js"></script>
 <script src="/js/contact-forms.js">
 </script>
 </body>
