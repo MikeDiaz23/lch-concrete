@@ -52,4 +52,4 @@ The hero pairs a medium-weight Inter first line (Concrete services) with a warm 
 
 ## Opening viewport strip
 
-The hero uses a viewport-height flex layout so its full-width highlights strip sits at the bottom of the opening browser view. The strip remains a static element in document flow and scrolls away with the page. Compact height rules adjust spacing and photo crops on shorter screens while retaining readable tile labels and all four strip items. The narrow mobile header keeps the logo and menu on one row. Browser checks cover initial bottom alignment, natural scrolling, and layout fit across desktop, tablet, and phone viewports.
+The hero uses a viewport-height flex layout so its full-width highlights strip sits at the bottom of the opening browser view. The strip remains a static element in document flow and scrolls away with the page. Compact height rules adjust spacing and photo crops on shorter screens while retaining readable tile labels and all three strip items. The narrow mobile header keeps the logo and menu on one row. Browser checks cover initial bottom alignment, natural scrolling, and layout fit across desktop, tablet, and phone viewports.
