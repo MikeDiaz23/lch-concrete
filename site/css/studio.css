@@ -92,7 +92,6 @@ body.modern a:hover { color: #fff; }
   pointer-events: none;
   z-index: -2;
   opacity: 0;
-  transition: opacity 1800ms ease;
   mask-image: radial-gradient(ellipse at center, #0003 12%, #000 48%, transparent 79%);
 }
 .hero-traces path {
@@ -103,7 +102,6 @@ body.modern a:hover { color: #fff; }
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
 }
-.hero-traces .trace-base { opacity: .045; }
 .hero-traces .trace-flow {
   opacity: .28;
   stroke-dasharray: .16 .84;

@@ -18,7 +18,14 @@
   var visible = true;
   var phase = 0;
 
-  // Extend the tile sketches into a quiet, continuous background drawing.
+  // Share exact normalized geometry between the static grid and moving highlights.
+  var gridLines = [];
+  [-.65, -.08, .44, 1.02, 1.75].forEach(function (end) {
+    gridLines.push([.52, -.75, end, 1.2]);
+  });
+  [.22, .53, .94].forEach(function (row) {
+    gridLines.push([0, row + .05, 1, row - .045]);
+  });
   var namespace = 'http://www.w3.org/2000/svg';
   var traces = document.createElementNS(namespace, 'svg');
   traces.setAttribute('class', 'hero-traces');
@@ -26,36 +33,18 @@
   traces.setAttribute('preserveAspectRatio', 'none');
   traces.setAttribute('aria-hidden', 'true');
   traces.setAttribute('focusable', 'false');
-  [
-    'M-70 180H250Q270 180 270 200V390Q270 410 290 410H570',
-    'M360 -50V120Q360 140 380 140H750Q770 140 770 160V350H1050',
-    'M-40 480H330Q350 480 350 500V690',
-    'M640 700V490Q640 470 660 470H870Q890 470 890 450V-40'
-  ].forEach(function (shape, index) {
-    ['trace-base', 'trace-flow'].forEach(function (className) {
-      var path = document.createElementNS(namespace, 'path');
-      path.setAttribute('class', className);
-      path.setAttribute('d', shape);
-      path.setAttribute('pathLength', '1');
-      path.style.setProperty('--trace-duration', 18 + index * 3 + 's');
-      path.style.setProperty('--trace-phase', -index * 5 + 's');
-      traces.appendChild(path);
-    });
+  gridLines.forEach(function (line, index) {
+    var path = document.createElementNS(namespace, 'path');
+    var duration = 18 + index % 4 * 3;
+    path.setAttribute('class', 'trace-flow');
+    path.setAttribute('d', 'M' + line[0] * 1000 + ' ' + line[1] * 650 + 'L' + line[2] * 1000 + ' ' + line[3] * 650);
+    path.setAttribute('pathLength', '1');
+    path.style.setProperty('--trace-duration', duration + 's');
+    path.style.setProperty('--trace-phase', -((8 + index * 3.7) % duration) + 's');
+    traces.appendChild(path);
   });
   hero.insertBefore(traces, canvas);
-
-  var tracesStarted = false;
-  function afterTiles() {
-    var root = document.documentElement;
-    if (tracesStarted || root.classList.contains('tile-intro-pending') || root.classList.contains('tile-intro')) return;
-    tracesStarted = true;
-    tileObserver.disconnect();
-    // Leave a breath after the photos settle before the background starts drawing.
-    window.setTimeout(function () { hero.classList.add('hero-traces-ready'); }, 350);
-  }
-  var tileObserver = new MutationObserver(afterTiles);
-  tileObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-  afterTiles();
+  hero.classList.add('hero-traces-ready');
 
   // Seeded texture stays stable when the viewport changes.
   function random(seed) {
@@ -94,21 +83,12 @@
     context.fillRect(0, 0, width, height);
 
     // Offset, perspective seams suggest poured slabs rather than a screen grid.
-    var originX = width * .52;
-    var originY = -height * .75;
-    var ends = [-.65, -.08, .44, 1.02, 1.75];
     context.lineWidth = 1;
     context.strokeStyle = 'rgba(181,168,148,.105)';
-    ends.forEach(function (end) {
+    gridLines.forEach(function (line) {
       context.beginPath();
-      context.moveTo(originX, originY);
-      context.lineTo(end * width, height * 1.2);
-      context.stroke();
-    });
-    [.22, .53, .94].forEach(function (row) {
-      context.beginPath();
-      context.moveTo(0, row * height + height * .05);
-      context.lineTo(width, row * height - height * .045);
+      context.moveTo(line[0] * width, line[1] * height);
+      context.lineTo(line[2] * width, line[3] * height);
       context.stroke();
     });
 
