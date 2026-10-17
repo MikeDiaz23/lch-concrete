@@ -8,6 +8,10 @@ All 13 pages share the new header, navigation, footer, typography, and spacing. 
 
 Edit page HTML directly. Base layout styles are in `site/css/modern.css`; the current visual direction is in `site/css/studio.css`, navigation behavior in `site/js/modern.js`, and form transport in `site/js/contact-forms.js`. The original exported stylesheet is retained for comparison but is no longer loaded by the redesigned pages.
 
+## Featured concrete photography
+
+The four service detail pages and About Us introduce their subject with a large photograph beside the title and primary actions. Photos retain their full proportions and original color, replacing the small cropped sidebar thumbnails. At tablet and phone widths, the photograph spans the content width below the introduction. Existing image variants provide responsive downloads, and explicit dimensions reserve the image space as it loads. Service descriptions and inquiry forms remain intact; the sidebar quote prompt follows the article on smaller screens.
+
 ## Validation
 
 - Python site validation passes for all 13 pages, local assets, responsive references, lightbox image data, and all 10 inquiry forms.

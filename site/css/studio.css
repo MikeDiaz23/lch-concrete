@@ -480,3 +480,34 @@ body.modern :focus-visible { outline-color: #dc9e85; }
   .orbit-card img { height: 56px; }
   .hero-foot > * { padding: 5px 8px; }
 }
+
+/* Put the concrete itself at the center of service and company introductions. */
+.project-hero { padding: 30px 0 48px; }
+.project-hero-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.4fr); gap: 24px 44px; align-items: center; }
+.project-hero .crumb { grid-column: 1 / -1; margin: 0; }
+.project-intro { min-width: 0; padding: 16px 0; }
+body.modern .project-intro h1 { font-size: clamp(38px, 4.1vw, 58px); }
+.project-intro p { max-width: 350px; margin: 22px 0 28px !important; }
+.project-intro .actions { align-items: center; gap: 22px; }
+.project-feature { margin: 0; min-width: 0; padding: 8px; border: 1px solid #34312b; border-radius: 24px; background: linear-gradient(145deg, #1b1b19, #161615); }
+.project-feature img { width: 100%; height: auto; border-radius: 16px; }
+.project-content { padding-top: 56px; }
+.project-content .article-aside { padding: 24px; border: 1px solid #2d2c29; border-radius: 20px; background: linear-gradient(145deg, #1b1b19, #161615); }
+.project-content .article-aside .btn { width: 100%; gap: 14px; padding-inline: 16px; }
+@media (max-width: 850px) {
+  .project-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .project-intro { padding: 0; }
+  .project-intro p { max-width: 550px; margin: 18px 0 24px !important; }
+  .project-content { grid-template-columns: 1fr; gap: 32px; }
+  .project-content .article-aside { position: static; order: 2; }
+  .project-content .article-body { order: 1; }
+}
+@media (max-width: 600px) {
+  .project-hero { padding: 24px 0 30px; }
+  .project-hero-grid { gap: 22px; }
+  body.modern .project-intro h1 { font-size: 39px; }
+  .project-intro .actions { gap: 18px; }
+  .project-feature { padding: 5px; border-radius: 19px; }
+  .project-feature img { border-radius: 13px; }
+  .project-content { padding-top: 34px; }
+}
