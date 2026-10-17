@@ -83,6 +83,44 @@ body.modern a:hover { color: #fff; }
   z-index: -2;
   mask-image: radial-gradient(ellipse at center, #000 30%, transparent 76%);
 }
+.hero-traces {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 1800ms ease;
+  mask-image: radial-gradient(ellipse at center, #0003 12%, #000 48%, transparent 79%);
+}
+.hero-traces path {
+  fill: none;
+  stroke: #baa58c;
+  stroke-width: .75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.hero-traces .trace-base { opacity: .045; }
+.hero-traces .trace-flow {
+  opacity: .28;
+  stroke-dasharray: .16 .84;
+  animation: hero-trace-travel var(--trace-duration) linear var(--trace-phase) infinite;
+  animation-play-state: paused;
+}
+.hero-traces-ready .hero-traces { opacity: 1; }
+.hero-traces-ready .trace-flow { animation-play-state: running; }
+.hero-traces-paused .trace-flow { animation-play-state: paused; }
+@keyframes hero-trace-travel {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-traces { transition: none; }
+  .hero-traces .trace-flow { animation: none; opacity: 0; }
+}
 .studio-copy { text-align: center; max-width: 560px; padding: 70px 0 55px; z-index: 2; }
 .studio-badge {
   display: inline-flex;

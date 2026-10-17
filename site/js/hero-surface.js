@@ -18,6 +18,45 @@
   var visible = true;
   var phase = 0;
 
+  // Extend the tile sketches into a quiet, continuous background drawing.
+  var namespace = 'http://www.w3.org/2000/svg';
+  var traces = document.createElementNS(namespace, 'svg');
+  traces.setAttribute('class', 'hero-traces');
+  traces.setAttribute('viewBox', '0 0 1000 650');
+  traces.setAttribute('preserveAspectRatio', 'none');
+  traces.setAttribute('aria-hidden', 'true');
+  traces.setAttribute('focusable', 'false');
+  [
+    'M-70 180H250Q270 180 270 200V390Q270 410 290 410H570',
+    'M360 -50V120Q360 140 380 140H750Q770 140 770 160V350H1050',
+    'M-40 480H330Q350 480 350 500V690',
+    'M640 700V490Q640 470 660 470H870Q890 470 890 450V-40'
+  ].forEach(function (shape, index) {
+    ['trace-base', 'trace-flow'].forEach(function (className) {
+      var path = document.createElementNS(namespace, 'path');
+      path.setAttribute('class', className);
+      path.setAttribute('d', shape);
+      path.setAttribute('pathLength', '1');
+      path.style.setProperty('--trace-duration', 18 + index * 3 + 's');
+      path.style.setProperty('--trace-phase', -index * 5 + 's');
+      traces.appendChild(path);
+    });
+  });
+  hero.insertBefore(traces, canvas);
+
+  var tracesStarted = false;
+  function afterTiles() {
+    var root = document.documentElement;
+    if (tracesStarted || root.classList.contains('tile-intro-pending') || root.classList.contains('tile-intro')) return;
+    tracesStarted = true;
+    tileObserver.disconnect();
+    // Leave a breath after the photos settle before the background starts drawing.
+    window.setTimeout(function () { hero.classList.add('hero-traces-ready'); }, 350);
+  }
+  var tileObserver = new MutationObserver(afterTiles);
+  tileObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  afterTiles();
+
   // Seeded texture stays stable when the viewport changes.
   function random(seed) {
     var value = Math.sin(seed * 127.1 + 311.7) * 43758.5453;
@@ -146,6 +185,10 @@
     frame = 0;
   }
 
+  function updateTracePlayback() {
+    hero.classList.toggle('hero-traces-paused', !visible || document.hidden);
+  }
+
   hero.addEventListener('pointermove', function (event) {
     if (motion.matches) return;
     var rect = hero.getBoundingClientRect();
@@ -164,6 +207,7 @@
   }, { passive: true });
   hero.addEventListener('pointercancel', function () { pointer.active = false; });
   document.addEventListener('visibilitychange', function () {
+    updateTracePlayback();
     if (document.hidden) stop(); else start();
   });
   motion.addEventListener('change', function () {
@@ -175,6 +219,7 @@
   });
   var observer = new IntersectionObserver(function (entries) {
     visible = entries[0].isIntersecting;
+    updateTracePlayback();
     if (visible) start(); else stop();
   });
   observer.observe(hero);
