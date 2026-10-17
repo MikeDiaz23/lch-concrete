@@ -107,7 +107,7 @@ body.modern .studio-copy > p { color: var(--muted); max-width: 420px; margin: 22
 .orbit-card:hover { transform: translateY(-5px) rotate(0deg); border-color: #786052; }
 .orbit-card img { height: 166px; width: 100%; object-fit: cover; border-radius: 14px; filter: saturate(.65); }
 .orbit-card span { display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: #b8b4ae; padding: 8px 4px 2px; }
-.orbit-card span:after { content: '↗'; color: #e2d8cb; }
+.orbit-card span:after { content: '→'; color: #e2d8cb; }
 .orbit-one { left: 0; top: 77px; transform: rotate(-7deg); }
 .orbit-two { right: 0; top: 125px; transform: rotate(6deg); }
 .orbit-three { left: 90px; bottom: 12px; transform: rotate(5deg); width: 175px; }
