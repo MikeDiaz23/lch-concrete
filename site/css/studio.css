@@ -124,15 +124,15 @@ html.tile-intro .orbit-card {
 }
 html.tile-intro .orbit-card img,
 html.tile-intro .orbit-card > span:not(.tile-draft) {
-  animation: tile-photo-in 480ms cubic-bezier(.22, 1, .36, 1) calc(900ms + var(--tile-delay)) both;
+  animation: tile-photo-in 850ms cubic-bezier(.45, 0, .55, 1) calc(850ms + var(--tile-delay)) both;
 }
 html.tile-intro .orbit-card .tile-draft {
   display: block;
   position: absolute;
-  inset: 5px;
+  inset: auto;
   padding: 0;
   pointer-events: none;
-  animation: tile-draft-out 400ms ease-out calc(980ms + var(--tile-delay)) both;
+  animation: tile-draft-out 850ms cubic-bezier(.45, 0, .55, 1) calc(850ms + var(--tile-delay)) both;
 }
 .orbit-card .tile-draft:after { content: none; }
 .tile-draft svg { width: 100%; height: 100%; overflow: visible; }
@@ -154,8 +154,8 @@ html.tile-intro .orbit-card .tile-draft {
   to { opacity: 1; }
 }
 @keyframes tile-photo-in {
-  from { opacity: 0; filter: saturate(.3) blur(3px); }
-  to { opacity: 1; filter: saturate(.65) blur(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes tile-draft-out {
   from { opacity: 1; }

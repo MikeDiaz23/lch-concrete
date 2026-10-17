@@ -30,4 +30,6 @@ Browser checks passed for ambient and pointer animation, the quote/gallery CTA h
 
 ## Hero tile entrance
 
-`site/js/hero-tiles.js` gives the four homepage tiles a staggered construction-sketch reveal on each page load. The outlines and slab joints draw first, followed by a soft photo fade, with 110ms between tiles. The sequence takes under two seconds and preserves the settled positions, tilts, and hover styles. Decorative SVG sketches are removed afterward. Any pointer, keyboard, or focus interaction skips the intro immediately. Reduced-motion preferences bypass it, and a short fallback restores visibility if the script fails to load.
+`site/js/hero-tiles.js` gives the four homepage tiles a staggered construction-sketch reveal on each page load. The outlines and slab joints draw first, followed by a soft photo fade, with 110ms between tiles. The sequence takes roughly two and a half seconds and preserves the settled positions, tilts, and hover styles. Decorative SVG sketches are removed afterward. Any pointer, keyboard, or focus interaction skips the intro immediately. Reduced-motion preferences bypass it, and a short fallback restores visibility if the script fails to load.
+
+The sketch/photo handoff uses matching image bounds and a synchronized 850ms crossfade. Image decoding is attempted before the intro (with a short time limit), and the photo retains its normal sharpness and color throughout to avoid a snap at completion.

@@ -23,13 +23,19 @@
     var draft = document.createElement('span');
     draft.className = 'tile-draft';
     draft.setAttribute('aria-hidden', 'true');
+    var image = card.querySelector('img');
+    // Match the real image bounds so its arrival never changes the framing.
+    draft.style.top = image.offsetTop + 'px';
+    draft.style.left = image.offsetLeft + 'px';
+    draft.style.width = image.offsetWidth + 'px';
+    draft.style.height = image.offsetHeight + 'px';
     var svg = document.createElementNS(namespace, 'svg');
     svg.setAttribute('viewBox', '0 0 100 100');
     svg.setAttribute('preserveAspectRatio', 'none');
     svg.setAttribute('focusable', 'false');
     [
       ['tile-draft-guides', 'M5 0V100M95 0V100M0 5H100M0 81H100'],
-      ['tile-draft-frame', 'M18 8H82Q91 8 91 17V68Q91 77 82 77H18Q9 77 9 68V17Q9 8 18 8Z'],
+      ['tile-draft-frame', 'M8 1H92Q99 1 99 8V92Q99 99 92 99H8Q1 99 1 92V8Q1 1 8 1Z'],
       ['tile-draft-joints', sketches[index]],
       ['tile-draft-caption', 'M10 90H44M84 90H91']
     ].forEach(function (part) {
@@ -57,11 +63,22 @@
     motion.removeEventListener('change', finish);
   }
 
-  root.classList.replace('tile-intro-pending', 'tile-intro');
   // Reveal immediately if someone starts interacting; navigation is never delayed.
   document.addEventListener('pointerdown', finish, true);
   document.addEventListener('keydown', finish, true);
   document.addEventListener('focusin', finish, true);
   motion.addEventListener('change', finish);
-  timer = window.setTimeout(finish, 1950);
+  // Decode before fading when possible, without holding the page on a slow image.
+  var decoded = cards.map(function (card) {
+    var image = card.querySelector('img');
+    return image.decode ? image.decode().catch(function () {}) : Promise.resolve();
+  });
+  Promise.race([
+    Promise.all(decoded),
+    new Promise(function (resolve) { window.setTimeout(resolve, 500); })
+  ]).then(function () {
+    if (!root.classList.contains('tile-intro-pending')) return;
+    root.classList.replace('tile-intro-pending', 'tile-intro');
+    timer = window.setTimeout(finish, 2300);
+  });
 }());
