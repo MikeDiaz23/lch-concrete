@@ -151,7 +151,7 @@ body.modern .studio-copy > p { color: var(--muted); max-width: 420px; margin: 22
 }
 .orbit-card:hover { transform: translateY(-5px) rotate(0deg); border-color: #786052; }
 .orbit-card img { height: 166px; width: 100%; object-fit: cover; border-radius: 14px; filter: saturate(.65); }
-.orbit-card span { display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: #b8b4ae; padding: 8px 4px 2px; }
+.orbit-card span { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; line-height: 1.4; color: #eee9e1; padding: 11px 5px 5px; }
 .orbit-card span:after { content: '›'; color: #e2d8cb; }
 .tile-draft { display: none; }
 html.tile-intro-pending .orbit-card { opacity: 0; }
