@@ -12,6 +12,10 @@ Edit page HTML directly. Base layout styles are in `site/css/modern.css`; the cu
 
 The four service detail pages and About Us introduce their subject with a large photograph beside the title and primary actions. Photos retain their full proportions and original color, replacing the small cropped sidebar thumbnails. At tablet and phone widths, the photograph spans the content width below the introduction. Existing image variants provide responsive downloads, and explicit dimensions reserve the image space as it loads. Service descriptions and inquiry forms remain intact; the sidebar quote prompt follows the article on smaller screens.
 
+## Light and dark appearance
+
+Every header includes a sun/moon switch with a keyboard-accessible “Light mode” state. Dark remains the initial appearance. The visitor's selection is saved in browser storage and restored before styles render on subsequent pages; switching still works when storage is unavailable. The control remains beside the mobile menu, with the logo and controls sharing one row. The light palette uses warm concrete neutrals, matching card and header surfaces, the original red/dark logo, and readable form and review colors. The homepage's aggregate, grid, and animated line accents adapt to the selected palette, including in reduced-motion mode. Appearance rules live in `site/css/theme.css`, with preference restoration in `site/js/theme.js`.
+
 ## Validation
 
 - Python site validation passes for all 13 pages, local assets, responsive references, lightbox image data, and all 10 inquiry forms.

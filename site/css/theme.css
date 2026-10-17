@@ -1,0 +1,135 @@
+/* Shared header controls; the two icons indicate the selected appearance. */
+.nav-row { gap: 20px; }
+.site-nav { order: 2; }
+.header-controls { display: flex; align-items: center; gap: 8px; order: 3; flex-shrink: 0; }
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 64px;
+  height: 40px;
+  flex-shrink: 0;
+  padding: 7px;
+  border: 1px solid #45423c;
+  border-radius: 999px;
+  background: #131312;
+  color: #9f998e;
+  cursor: pointer;
+}
+.theme-toggle::before { content: ''; position: absolute; left: 3px; top: 3px; width: 28px; height: 32px; border-radius: 999px; background: #35322d; transform: translateX(28px); transition: transform .2s ease, background .2s ease; }
+.theme-toggle svg { position: relative; z-index: 1; width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.theme-moon { color: #f1e8dc; }
+.theme-toggle:hover { border-color: #8a7c6b; }
+.logo-on-light { display: none !important; }
+
+@media (max-width: 850px) {
+  .nav-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; row-gap: 0; }
+  .site-logo { min-width: 0; max-width: 100%; }
+  .header-controls { order: 1; margin-left: auto; }
+  .site-nav { order: 3; grid-column: 1 / -1; }
+  .nav-toggle { font-size: 11px; padding: 9px 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle::before { transition: none; }
+}
+
+/* Warm concrete neutrals, with the same red brand accents and panel hierarchy. */
+html[data-theme='light'] {
+  color-scheme: light;
+  --paper: #f5f4f0;
+  --ink: #272726;
+  --muted: #625f59;
+  --red: #a8312d;
+  --line: #d9d6d0;
+  --dark: #eeece6;
+  --panel: #ffffff;
+}
+html[data-theme='light'] .logo-on-dark { display: none !important; }
+html[data-theme='light'] .logo-on-light { display: block !important; }
+html[data-theme='light'] body.modern a:hover { color: #8f2724; }
+html[data-theme='light'] .site-header,
+html[data-theme='light'] .hero-strip,
+html[data-theme='light'] .service-card,
+html[data-theme='light'] .project-feature,
+html[data-theme='light'] .project-content .article-aside { background: linear-gradient(145deg, #ffffff, #f0eee8); border-color: #d7d2c9; box-shadow: inset 0 1px 0 #fff; }
+html[data-theme='light'] .site-nav { color: #58554f; }
+html[data-theme='light'] .site-nav > a:hover,
+html[data-theme='light'] .nav-drop > summary:hover,
+html[data-theme='light'] .site-nav [aria-current=page] { color: #a8312d; }
+html[data-theme='light'] .nav-panel { background: #fffefa; border-color: #d7d2c9; box-shadow: 0 16px 40px #3a30201a; }
+html[data-theme='light'] .nav-panel a:hover { background: #eeeae2; }
+html[data-theme='light'] .nav-toggle { background: #eeebe4; border-color: #c9c3b8; }
+html[data-theme='light'] .theme-toggle { background: #e8e3da; border-color: #b9b1a4; color: #6d665c; }
+html[data-theme='light'] .theme-toggle::before { background: #fffefa; box-shadow: 0 1px 4px #40362424; transform: translateX(0); }
+html[data-theme='light'] .theme-sun { color: #8b3e26; }
+html[data-theme='light'] .theme-moon { color: #6d665c; }
+html[data-theme='light'] .btn-outline { color: #36312b !important; background: #fffdf8; border-color: #bdb5a8; }
+html[data-theme='light'] .btn-outline:hover { background: #ebe6dd; }
+html[data-theme='light'] .eyebrow:before { background: #a8312d; }
+html[data-theme='light'] .studio-badge { background: #eae6de; border-color: #d0c8bb; color: #62584c; }
+html[data-theme='light'] .studio-badge:before { background: #a36941; }
+html[data-theme='light'] .studio-badge-number { color: #8b3e26; }
+html[data-theme='light'] .studio-copy h1 .hero-title-craft { color: #a8312d; }
+html[data-theme='light'] body.modern .studio-copy .hero-services { color: #3b3731; }
+html[data-theme='light'] body.modern .studio-copy .hero-description { color: #625f59; }
+html[data-theme='light'] .studio-location .studio-location-audience,
+html[data-theme='light'] .studio-location .studio-location-area { color: #62584c; }
+html[data-theme='light'] .orbit-card { background: linear-gradient(145deg, #fffefa, #eae6de); border-color: #cec6ba; box-shadow: 0 8px 30px #392c1812; }
+html[data-theme='light'] .orbit-card:hover { border-color: #9d795e; }
+html[data-theme='light'] .orbit-card span { color: #38332d; }
+html[data-theme='light'] .orbit-card span:after { color: #8b3e26; }
+html[data-theme='light'] .hero-traces path,
+html[data-theme='light'] .tile-draft path { stroke: #8c6848; }
+html[data-theme='light'] .tile-draft .tile-draft-guides { stroke: #8d8374; }
+html[data-theme='light'] .hero-foot { color: #62584c; }
+html[data-theme='light'] .hero-foot > * { border-color: #d7d2c9; }
+html[data-theme='light'] .hero-foot span:first-child { color: #484137; }
+html[data-theme='light'] .hero-foot > a { color: #8f2724; }
+html[data-theme='light'] .text-link { color: #6e3930 !important; border-color: #b59d8e; }
+html[data-theme='light'] .text-link:hover { color: #a8312d !important; }
+html[data-theme='light'] .service-card:hover { border-color: #a98b73; }
+html[data-theme='light'] .service-card .photo-clip { background: #eae6de; border-color: #d2c9bb; }
+html[data-theme='light'] .service-card .card-top span:last-child { color: #6e3930; }
+html[data-theme='light'] .additional-services { border-color: #d7d2c9; }
+html[data-theme='light'] .about-section,
+html[data-theme='light'] .quote-section { background: #eeece6; border-color: #dbd5ca; }
+html[data-theme='light'] .about-photo,
+html[data-theme='light'] .article-aside img,
+html[data-theme='light'] .gallery-grid a { background: #e9e4da; border-color: #cfc5b6; }
+html[data-theme='light'] .experience-tag { background: #faf5eb; color: #4f3724; border-color: #cdbba5; }
+html[data-theme='light'] .values { border-color: #cfc6b8; }
+html[data-theme='light'] .values span:before { color: #8a532e; }
+html[data-theme='light'] .project-card,
+html[data-theme='light'] .review-grid > div:last-child { background: #fffdfa; border-color: #d7d0c5; }
+html[data-theme='light'] .reviews { background: #f5f4f0; }
+html[data-theme='light'] .review-quote { color: #38332d; }
+html[data-theme='light'] .review-source { color: #6b6256; }
+html[data-theme='light'] .review-stars { color: #8b572b; }
+html[data-theme='light'] .review-divider,
+html[data-theme='light'] .contact-person { border-color: #d3cabc; }
+html[data-theme='light'] .contact-email { color: #763c2c !important; }
+html[data-theme='light'] .quote-form { background: #fffdfa; border-color: #d3cabc; }
+html[data-theme='light'] .field label { color: #514b43; }
+html[data-theme='light'] .field input,
+html[data-theme='light'] .field select,
+html[data-theme='light'] .field textarea { background: #fcfbf8; color: #302d28; border-color: #969188; }
+html[data-theme='light'] .field input:focus,
+html[data-theme='light'] .field select:focus,
+html[data-theme='light'] .field textarea:focus { border-color: #a8312d; outline-color: #a8312d; }
+html[data-theme='light'] .field input::placeholder,
+html[data-theme='light'] .field textarea::placeholder { color: #746c60; }
+html[data-theme='light'] .form-submit small { color: #6b6256; }
+html[data-theme='light'] .quote-form .w-form-fail { background: #f6e1dd; color: #7d2823; }
+html[data-theme='light'] .quote-form .w-form-done { background: #e2eddf; color: #29492b; }
+html[data-theme='light'] .site-footer { background: #e9e6df; border-color: #d2c9bb; }
+html[data-theme='light'] .footer-top h3 { color: #554d42 !important; }
+html[data-theme='light'] .footer-top p,
+html[data-theme='light'] .footer-top a { color: #62584c !important; }
+html[data-theme='light'] .footer-top a:hover { color: #a8312d !important; }
+html[data-theme='light'] .footer-bottom { color: #6b6256; border-color: #cfc6b8; }
+html[data-theme='light'] .cities { color: #62584c; }
+html[data-theme='light'] .page-hero { border-color: #d7d2c9; }
+html[data-theme='light'] .gallery-grid a:after { color: #6b3a25; background: #fff7eb; border-color: #b79a7d; }
+html[data-theme='light'] .skip { color: #fff; background: #a8312d; }
+html[data-theme='light'] body.modern :focus-visible { outline-color: #a8312d; }

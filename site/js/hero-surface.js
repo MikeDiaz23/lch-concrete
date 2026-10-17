@@ -17,6 +17,7 @@
   var previous = 0;
   var visible = true;
   var phase = 0;
+  var lightTheme = document.documentElement.dataset.theme === 'light';
 
   // Share exact normalized geometry between the static grid and moving highlights.
   var gridLines = [];
@@ -77,14 +78,14 @@
     context.clearRect(0, 0, width, height);
     var radius = Math.min(width * .4, 250);
     var wash = context.createRadialGradient(light.x, light.y, 0, light.x, light.y, radius);
-    wash.addColorStop(0, pointer.active ? 'rgba(195,173,142,.085)' : 'rgba(195,173,142,.035)');
+    wash.addColorStop(0, lightTheme ? 'rgba(151,115,77,.05)' : pointer.active ? 'rgba(195,173,142,.085)' : 'rgba(195,173,142,.035)');
     wash.addColorStop(1, 'rgba(195,173,142,0)');
     context.fillStyle = wash;
     context.fillRect(0, 0, width, height);
 
     // Offset, perspective seams suggest poured slabs rather than a screen grid.
     context.lineWidth = 1;
-    context.strokeStyle = 'rgba(181,168,148,.105)';
+    context.strokeStyle = lightTheme ? 'rgba(105,91,71,.14)' : 'rgba(181,168,148,.105)';
     gridLines.forEach(function (line) {
       context.beginPath();
       context.moveTo(line[0] * width, line[1] * height);
@@ -101,7 +102,7 @@
       var x = grain.x + (distance ? dx / distance * displacement : 0);
       var y = grain.y + (distance ? dy / distance * displacement : 0);
       var alpha = .06 + grain.tone * .14 + influence * .26;
-      context.fillStyle = 'rgba(200,190,172,' + alpha + ')';
+      context.fillStyle = lightTheme ? 'rgba(105,91,71,' + alpha * .7 + ')' : 'rgba(200,190,172,' + alpha + ')';
       context.beginPath();
       // Small angular flecks evoke the mineral aggregate in concrete.
       context.moveTo(x, y - grain.size);
@@ -186,6 +187,10 @@
     if (event.pointerType === 'touch') pointer.active = false;
   }, { passive: true });
   hero.addEventListener('pointercancel', function () { pointer.active = false; });
+  document.addEventListener('lch:themechange', function () {
+    lightTheme = document.documentElement.dataset.theme === 'light';
+    draw();
+  });
   document.addEventListener('visibilitychange', function () {
     updateTracePlayback();
     if (document.hidden) stop(); else start();

@@ -18,3 +18,4 @@
 - Keep main as the original migration until the user accepts the redesign. Hosting remains deferred.
 
 - The current visual direction is defined in `site/css/studio.css`, loaded after `modern.css`. It uses dark surfaces, compact typography, rounded photo frames, and the existing white logo asset with red action accents. Preserve the business focus when adapting the libraries.dev reference.
+- `site/css/theme.css` adds the header appearance switch and light palette across all 13 pages. Preserve both themes when changing surfaces or text colors. `site/js/theme.js` loads before styles to restore the saved `lch-theme` preference without a theme flash; dark is the default. Header and footer logos have separate light/dark variants controlled by CSS.
