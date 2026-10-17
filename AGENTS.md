@@ -17,5 +17,6 @@
 - New navigation uses native details/summary dropdowns and an accessible mobile toggle; the exported runtime is retained only for gallery lightboxes.
 - Keep main as the original migration until the user accepts the redesign. Hosting remains deferred.
 
-- The current visual direction is defined in `site/css/studio.css`, loaded after `modern.css`. It uses dark surfaces, compact typography, rounded photo frames, and the existing white logo asset with red action accents. Preserve the business focus when adapting the libraries.dev reference.
+- The current visual direction is defined in `site/css/studio.css`, loaded after `modern.css`. It uses dark surfaces, compact typography, rounded photo frames, and red action accents. Preserve the business focus when adapting the libraries.dev reference.
 - `site/css/theme.css` adds the header appearance switch and light palette across all 13 pages. Preserve both themes when changing surfaces or text colors. `site/js/theme.js` loads before styles to restore the saved `lch-theme` preference without a theme flash; dark is the default. Header and footer logos have separate light/dark variants controlled by CSS.
+- Keep the logo icon brand red in both themes. `LCH-Concrete-Logo-Dark.svg` uses white lettering; `LCH-Concrete-LogoTopNav1.svg` uses dark lettering. Both share the same geometry so only the lettering changes when switching modes.
