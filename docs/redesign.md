@@ -8,6 +8,10 @@ All 13 pages share the new header, navigation, footer, typography, and spacing. 
 
 Edit page HTML directly. Base layout styles are in `site/css/modern.css`; the current visual direction is in `site/css/studio.css`, navigation behavior in `site/js/modern.js`, and form transport in `site/js/contact-forms.js`. The original exported stylesheet is retained for comparison but is no longer loaded by the redesigned pages.
 
+## Property partnerships
+
+The services overview includes a Residential & Commercial section at `#residential-commercial`. Separate content for homeowners, businesses, and city or public properties explains project scope, access, scheduling, and information to bring to an estimate conversation. A shared planning guide leads into the existing quote form. Public-property copy invites a scope and requirements discussion without claiming prior government contracts, procurement approval, or credentials. The section uses theme variables for readable text and panel surfaces in both appearances, with a single-column layout on phones and tablets.
+
 ## Featured concrete photography
 
 The four service detail pages and About Us introduce their subject with a large photograph beside the title and primary actions. Photos retain their full proportions and original color, replacing the small cropped sidebar thumbnails. At tablet and phone widths, the photograph spans the content width below the introduction. Existing image variants provide responsive downloads, and explicit dimensions reserve the image space as it loads. Service descriptions and inquiry forms remain intact; the sidebar quote prompt follows the article on smaller screens.
