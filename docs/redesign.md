@@ -48,7 +48,7 @@ Persistent warm highlights begin immediately on page load, alongside the tile in
 
 ## Hero typography
 
-The hero pairs a firm, slightly heavier Inter first line (Concrete work.) with a warm Georgia italic second line (Residential & Commercial) to distinguish the offering from its audience. The service list is separated from the supporting sentence, with readable line lengths and deliberate spacing. The experience badge emphasizes the number; audience and location metadata use separate treatments below more legible action buttons. All business details remain intact. Desktop, tablet, and 320–390px phone layouts were checked for wrapping and overflow; tablet spacing keeps the copy clear of the photo tiles. Georgia is a system font, so the contrasting headline adds no font download.
+The hero pairs a medium-weight Inter first line (Concrete services) with a warm Georgia italic second line (Residential & Commercial) to distinguish the offering from its audience. One supporting sentence combines the services and local-team message in a consistent, stronger text treatment, with a readable line length and the same typography throughout. Dark mode uses warm white text; light mode uses dark text. The experience badge emphasizes the number, and the action buttons remain legible. Georgia is a system font, so the contrasting headline adds no font download.
 
 ## Opening viewport strip
 

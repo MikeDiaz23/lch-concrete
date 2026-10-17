@@ -72,7 +72,6 @@ html[data-theme='light'] .studio-badge:before { background: #a36941; }
 html[data-theme='light'] .studio-badge-number { color: #8b3e26; }
 html[data-theme='light'] .studio-copy h1 .hero-title-craft { color: #a8312d; }
 html[data-theme='light'] body.modern .studio-copy .hero-services { color: #3b3731; }
-html[data-theme='light'] body.modern .studio-copy .hero-description { color: #625f59; }
 html[data-theme='light'] .studio-location .studio-location-audience,
 html[data-theme='light'] .studio-location .studio-location-area { color: #62584c; }
 html[data-theme='light'] .orbit-card { background: linear-gradient(145deg, #fffefa, #eae6de); border-color: #cec6ba; box-shadow: 0 8px 30px #392c1812; }
