@@ -81,6 +81,10 @@ html[data-theme='light'] .orbit-card span { color: #38332d; }
 html[data-theme='light'] .orbit-card span:after { color: #8b3e26; }
 html[data-theme='light'] .hero-traces path,
 html[data-theme='light'] .tile-draft path { stroke: #8c6848; }
+html[data-theme='light'] .hero-surface { mask-image: radial-gradient(ellipse at center, #000 38%, transparent 86%); }
+@media (prefers-reduced-motion: no-preference) {
+  html[data-theme='light'] .hero-traces .trace-flow { opacity: .42; stroke-width: 1; }
+}
 html[data-theme='light'] .tile-draft .tile-draft-guides { stroke: #8d8374; }
 html[data-theme='light'] .hero-foot { color: #62584c; }
 html[data-theme='light'] .hero-foot > * { border-color: #d7d2c9; }

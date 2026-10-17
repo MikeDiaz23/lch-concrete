@@ -34,6 +34,8 @@ The earlier light editorial direction is preserved in commit `c0f5421`. No refer
 
 The canvas does not capture pointer input or block links. It caps resolution and particle count, draws at approximately 30 fps, and pauses offscreen or when the document is hidden. Reduced-motion mode draws a still surface and disables pointer animation. No dependencies or new external assets are required.
 
+In light mode, darker warm mineral tones keep the grid and pointer sweep visible against the pale background. The pointer wash strengthens during interaction and the trail uses a darker tint; the surface mask fades more gradually toward the edges. Moving grid highlights have slightly more contrast in light mode, while reduced-motion mode retains only the static grid.
+
 Browser checks passed for ambient and pointer animation, the quote/gallery CTA hit target, offscreen pause, reduced-motion stability, animation resume, mobile/tablet overflow, and absence of runtime errors. These checks sent no inquiries.
 
 ## Hero tile entrance

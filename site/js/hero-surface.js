@@ -78,14 +78,16 @@
     context.clearRect(0, 0, width, height);
     var radius = Math.min(width * .4, 250);
     var wash = context.createRadialGradient(light.x, light.y, 0, light.x, light.y, radius);
-    wash.addColorStop(0, lightTheme ? 'rgba(151,115,77,.05)' : pointer.active ? 'rgba(195,173,142,.085)' : 'rgba(195,173,142,.035)');
-    wash.addColorStop(1, 'rgba(195,173,142,0)');
+    var washTone = lightTheme ? '118,91,61' : '195,173,142';
+    var washOpacity = lightTheme ? (pointer.active ? .14 : .035) : (pointer.active ? .085 : .035);
+    wash.addColorStop(0, 'rgba(' + washTone + ',' + washOpacity + ')');
+    wash.addColorStop(1, 'rgba(' + washTone + ',0)');
     context.fillStyle = wash;
     context.fillRect(0, 0, width, height);
 
     // Offset, perspective seams suggest poured slabs rather than a screen grid.
     context.lineWidth = 1;
-    context.strokeStyle = lightTheme ? 'rgba(105,91,71,.14)' : 'rgba(181,168,148,.105)';
+    context.strokeStyle = lightTheme ? 'rgba(105,91,71,.24)' : 'rgba(181,168,148,.105)';
     gridLines.forEach(function (line) {
       context.beginPath();
       context.moveTo(line[0] * width, line[1] * height);
@@ -102,7 +104,7 @@
       var x = grain.x + (distance ? dx / distance * displacement : 0);
       var y = grain.y + (distance ? dy / distance * displacement : 0);
       var alpha = .06 + grain.tone * .14 + influence * .26;
-      context.fillStyle = lightTheme ? 'rgba(105,91,71,' + alpha * .7 + ')' : 'rgba(200,190,172,' + alpha + ')';
+      context.fillStyle = lightTheme ? 'rgba(105,91,71,' + alpha * .85 + ')' : 'rgba(200,190,172,' + alpha + ')';
       context.beginPath();
       // Small angular flecks evoke the mineral aggregate in concrete.
       context.moveTo(x, y - grain.size);
@@ -116,10 +118,11 @@
     if (trail.length > 1 && !motion.matches) {
       var first = trail[0];
       var last = trail[trail.length - 1];
-      var opacity = Math.max(0, 1 - last.age / 1100) * .1;
+      var opacity = Math.max(0, 1 - last.age / 1100) * (lightTheme ? .17 : .1);
+      var trailTone = lightTheme ? '110,85,57' : '203,177,142';
       var stroke = context.createLinearGradient(first.x, first.y, last.x, last.y);
-      stroke.addColorStop(0, 'rgba(203,177,142,0)');
-      stroke.addColorStop(1, 'rgba(203,177,142,' + opacity + ')');
+      stroke.addColorStop(0, 'rgba(' + trailTone + ',0)');
+      stroke.addColorStop(1, 'rgba(' + trailTone + ',' + opacity + ')');
       context.save();
       context.lineCap = 'round';
       context.lineJoin = 'round';
