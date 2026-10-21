@@ -147,6 +147,8 @@ body.modern .studio-copy .hero-services { color: #e8e4dd; max-width: 440px; marg
 .orbit-card {
   position: absolute;
   width: 230px;
+  scale: 1.05;
+  transform-origin: center bottom;
   padding: 8px;
   border: 1px solid #30302d;
   border-radius: 22px;
@@ -345,8 +347,8 @@ body.modern :focus-visible { outline-color: #dc9e85; }
   .orbit-card img { height: 145px; }
   .orbit-one { left: 0; top: 55px; }
   .orbit-two { right: 0; top: 65px; }
-  .orbit-three { left: 35px; bottom: 12px; width: 162px; }
-  .orbit-four { right: 35px; bottom: 12px; width: 162px; }
+  .orbit-three { left: 20px; bottom: 12px; width: 162px; }
+  .orbit-four { right: 20px; bottom: 12px; width: 162px; }
   .studio-copy { max-width: 490px; }
 }
 @media (max-width: 850px) {
