@@ -27,6 +27,8 @@
   [.22, .53, .94].forEach(function (row) {
     gridLines.push([0, row + .05, 1, row - .045]);
   });
+  var crossSeam = gridLines[gridLines.length - 1];
+  var crossSlope = (crossSeam[3] - crossSeam[1]) / (crossSeam[2] - crossSeam[0]);
   var namespace = 'http://www.w3.org/2000/svg';
   var traces = document.createElementNS(namespace, 'svg');
   traces.setAttribute('class', 'hero-traces');
@@ -103,13 +105,18 @@
       var displacement = pointer.active && !motion.matches ? influence * influence * 7 : 0;
       var x = grain.x + (distance ? dx / distance * displacement : 0);
       var y = grain.y + (distance ? dy / distance * displacement : 0);
+      var depth = lightTheme ? 1 : (grain.y / height - gridLines[0][1] -
+        crossSlope * (grain.x / width - gridLines[0][0])) / .95;
+      var grainWidth = grain.size * depth;
+      var grainHeight = grain.size * depth;
       var alpha = .06 + grain.tone * .14 + influence * .26;
+      if (!lightTheme) alpha /= Math.max(1, depth);
       context.fillStyle = lightTheme ? 'rgba(105,91,71,' + alpha * .85 + ')' : 'rgba(200,190,172,' + alpha + ')';
       context.beginPath();
       // Small angular flecks evoke the mineral aggregate in concrete.
-      context.moveTo(x, y - grain.size);
-      context.lineTo(x + grain.size, y);
-      context.lineTo(x, y + grain.size * .65);
+      context.moveTo(x, y - grainHeight);
+      context.lineTo(x + grainWidth, y);
+      context.lineTo(x, y + grainHeight * .65);
       context.closePath();
       context.fill();
     });
