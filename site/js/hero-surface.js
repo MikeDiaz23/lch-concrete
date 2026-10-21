@@ -87,14 +87,23 @@
     context.fillStyle = wash;
     context.fillRect(0, 0, width, height);
 
-    // Offset, perspective seams suggest poured slabs rather than a screen grid.
-    context.lineWidth = 1;
-    context.strokeStyle = lightTheme ? 'rgba(105,91,71,.24)' : 'rgba(181,168,148,.105)';
+    // A recessed joint and its lit lower edge separate the concrete slabs.
     gridLines.forEach(function (line) {
-      context.beginPath();
-      context.moveTo(line[0] * width, line[1] * height);
-      context.lineTo(line[2] * width, line[3] * height);
-      context.stroke();
+      function seam(lineWidth, tone, offsetX, offsetY) {
+        context.lineWidth = lineWidth;
+        context.strokeStyle = tone;
+        context.beginPath();
+        context.moveTo(line[0] * width + offsetX, line[1] * height + offsetY);
+        context.lineTo(line[2] * width + offsetX, line[3] * height + offsetY);
+        context.stroke();
+      }
+      if (lightTheme) {
+        seam(1, 'rgba(105,91,71,.24)', 0, 0);
+      } else {
+        seam(4, 'rgba(8,10,8,.16)', 0, 0);
+        seam(1, 'rgba(224,224,207,.3)', 1.2, 1.4);
+        seam(1.8, 'rgba(8,10,8,.72)', 0, 0);
+      }
     });
 
     grains.forEach(function (grain) {
