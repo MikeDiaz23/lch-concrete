@@ -1,0 +1,21 @@
+/* A concrete surface confined to the dark homepage hero, fading into the page. */
+html:not([data-theme='light']) .hero-concrete {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 43%, #12121240, transparent 65%),
+    radial-gradient(ellipse at 14% 12%, #8c8e8114, transparent 55%),
+    linear-gradient(180deg, #41423f 0%, #343632 24%, #292b27 50%, #1d1f1b 73%, #121212 98%);
+}
+html:not([data-theme='light']) .hero-concrete::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url('/images/concrete-grain.svg') repeat;
+  background-size: 512px 512px;
+  mix-blend-mode: soft-light;
+  opacity: .28;
+  mask-image: linear-gradient(180deg, #000 0%, #000 48%, transparent 96%);
+}
