@@ -37,12 +37,12 @@
           buffer.height = texture.naturalHeight;
           var bufferContext = buffer.getContext('2d');
           if (!bufferContext) return;
-          // Resolve SVG filters once; projection resamples this small cached bitmap.
+          // Cache the material once; projection resamples this bitmap on resize.
           bufferContext.drawImage(texture, 0, 0);
           raster = buffer;
           schedule();
         };
-        texture.src = '/images/concrete-grain.svg?v=2';
+        texture.src = '/images/concrete-photo-v1.jpg';
       }
       return;
     }

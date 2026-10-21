@@ -13,10 +13,10 @@ html:not([data-theme='light']) .hero-concrete::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: url('/images/concrete-grain.svg?v=2') repeat;
-  background-size: 512px 512px;
+  background: url('/images/concrete-photo-v1.jpg') repeat;
+  background-size: 1024px 1024px;
   mix-blend-mode: soft-light;
-  opacity: .44;
+  opacity: .6;
   mask-image: linear-gradient(180deg, #000 0%, #000 48%, transparent 96%);
 }
 .concrete-perspective { display: none; }
@@ -30,6 +30,6 @@ html:not([data-theme='light']) .hero-concrete .concrete-perspective {
   display: block;
   pointer-events: none;
   mix-blend-mode: soft-light;
-  opacity: .44;
+  opacity: .6;
   mask-image: linear-gradient(180deg, #000 0%, #000 48%, transparent 96%);
 }
