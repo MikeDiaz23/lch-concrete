@@ -34,7 +34,7 @@ The earlier light editorial direction is preserved in commit `c0f5421`. No refer
 
 ## Interactive hero surface
 
-In dark mode, the homepage hero uses a concrete-gray gradient and a subtle, static mineral texture that fade into the normal page background at its lower edge. This treatment is scoped by the homepage-only `hero-concrete` class and `site/css/hero-concrete.css`. The small procedural SVG in `site/images/concrete-grain.svg` provides fine grain and broader mottling without a large photographic asset or an additional animation loop. Light mode and other sections retain their existing surfaces. The diagonal grid and pointer interactions remain on their existing layers.
+In dark mode, the homepage hero uses a concrete-gray gradient and a subtle, static mineral texture that fade into the normal page background at its lower edge. This treatment is scoped by the homepage-only `hero-concrete` class and `site/css/hero-concrete.css`. The small procedural SVG in `site/images/concrete-grain.svg` provides fine grain, broader mottling, coarser aggregate variation, and small pores with faint raised edges without a large photographic asset or an additional animation loop. Light mode and other sections retain their existing surfaces. The diagonal grid and pointer interactions remain on their existing layers.
 
 `site/js/hero-surface.js` draws a decorative canvas behind the homepage hero. Fine angular grains suggest concrete aggregate; offset perspective seams suggest poured slabs. A slow light sweep adds ambient movement. Pointer movement gently displaces nearby grains and leaves a short finishing stroke, referring to the pass of a trowel.
 
