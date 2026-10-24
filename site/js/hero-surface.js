@@ -1,4 +1,4 @@
-/* Aggregate and slab joints: a quiet, pointer-responsive concrete surface. */
+/* A quiet, pointer-responsive concrete surface without grid lines. */
 (function () {
   'use strict';
   var hero = document.querySelector('.studio-hero');
@@ -6,15 +6,6 @@
   if (!canvas) return;
   var context = canvas.getContext('2d');
   if (!context) return;
-  var material = hero.closest('.hero-concrete');
-  material = material && material.querySelector('.concrete-material');
-  if (!material) return;
-  var joints = document.createElement('canvas');
-  joints.className = 'concrete-joints';
-  joints.setAttribute('aria-hidden', 'true');
-  var jointContext = joints.getContext('2d');
-  if (!jointContext) return;
-  material.appendChild(joints);
   var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var width = 0;
   var height = 0;
@@ -28,35 +19,9 @@
   var phase = 0;
   var lightTheme = document.documentElement.dataset.theme === 'light';
 
-  // Share exact normalized geometry between the static grid and moving highlights.
-  var gridLines = [];
-  [-.65, -.08, .44, 1.02, 1.75].forEach(function (end) {
-    gridLines.push([.52, -.75, end, 1.2]);
-  });
-  [.22, .53, .94].forEach(function (row) {
-    gridLines.push([0, row + .05, 1, row - .045]);
-  });
-  var crossSeam = gridLines[gridLines.length - 1];
-  var crossSlope = (crossSeam[3] - crossSeam[1]) / (crossSeam[2] - crossSeam[0]);
-  var namespace = 'http://www.w3.org/2000/svg';
-  var traces = document.createElementNS(namespace, 'svg');
-  traces.setAttribute('class', 'hero-traces');
-  traces.setAttribute('viewBox', '0 0 1000 650');
-  traces.setAttribute('preserveAspectRatio', 'none');
-  traces.setAttribute('aria-hidden', 'true');
-  traces.setAttribute('focusable', 'false');
-  gridLines.forEach(function (line, index) {
-    var path = document.createElementNS(namespace, 'path');
-    var duration = 18 + index % 4 * 3;
-    path.setAttribute('class', 'trace-flow');
-    path.setAttribute('d', 'M' + line[0] * 1000 + ' ' + line[1] * 650 + 'L' + line[2] * 1000 + ' ' + line[3] * 650);
-    path.setAttribute('pathLength', '1');
-    path.style.setProperty('--trace-duration', duration + 's');
-    path.style.setProperty('--trace-phase', -((8 + index * 3.7) % duration) + 's');
-    traces.appendChild(path);
-  });
-  hero.insertBefore(traces, canvas);
-  hero.classList.add('hero-traces-ready');
+  // Retain the concrete plane's depth without drawing its former grid.
+  var planeOrigin = { x: .52, y: -.75 };
+  var crossSlope = -.095;
 
   // Seeded texture stays stable when the viewport changes.
   function random(seed) {
@@ -72,7 +37,6 @@
     canvas.width = Math.round(width * scale);
     canvas.height = Math.round(height * scale);
     context.setTransform(scale, 0, 0, scale, 0, 0);
-    drawJoints(rect, scale);
     grains = [];
     var count = Math.min(1400, Math.round(width * height / 650));
     for (var i = 0; i < count; i++) {
@@ -83,31 +47,6 @@
     light.y = height * .65;
     trail = [];
     draw();
-  }
-
-  // Draw the approved dark seams once, beneath the shared lightness adjustment.
-  function drawJoints(rect, scale) {
-    var bounds = material.getBoundingClientRect();
-    joints.style.left = rect.left - bounds.left + 'px';
-    joints.style.top = rect.top - bounds.top + 'px';
-    joints.style.width = width + 'px';
-    joints.style.height = height + 'px';
-    joints.width = Math.round(width * scale);
-    joints.height = Math.round(height * scale);
-    jointContext.setTransform(scale, 0, 0, scale, 0, 0);
-    gridLines.forEach(function (line) {
-      function seam(lineWidth, tone, offsetX, offsetY) {
-        jointContext.lineWidth = lineWidth;
-        jointContext.strokeStyle = tone;
-        jointContext.beginPath();
-        jointContext.moveTo(line[0] * width + offsetX, line[1] * height + offsetY);
-        jointContext.lineTo(line[2] * width + offsetX, line[3] * height + offsetY);
-        jointContext.stroke();
-      }
-      seam(4, 'rgba(8,10,8,.22)', 0, 0);
-      seam(1, 'rgba(224,224,207,.4)', 1.2, 1.4);
-      seam(2, 'rgba(8,10,8,.82)', 0, 0);
-    });
   }
 
   function draw() {
@@ -130,8 +69,8 @@
       var displacement = pointer.active && !motion.matches ? influence * influence * 7 : 0;
       var x = grain.x + (distance ? dx / distance * displacement : 0);
       var y = grain.y + (distance ? dy / distance * displacement : 0);
-      var depth = lightTheme ? 1 : (grain.y / height - gridLines[0][1] -
-        crossSlope * (grain.x / width - gridLines[0][0])) / .95;
+      var depth = lightTheme ? 1 : (grain.y / height - planeOrigin.y -
+        crossSlope * (grain.x / width - planeOrigin.x)) / .95;
       var grainWidth = grain.size * depth;
       var grainHeight = grain.size * depth;
       var alpha = .06 + grain.tone * .14 + influence * .26;
@@ -201,10 +140,6 @@
     frame = 0;
   }
 
-  function updateTracePlayback() {
-    hero.classList.toggle('hero-traces-paused', !visible || document.hidden);
-  }
-
   hero.addEventListener('pointermove', function (event) {
     if (motion.matches) return;
     var rect = hero.getBoundingClientRect();
@@ -227,7 +162,6 @@
     draw();
   });
   document.addEventListener('visibilitychange', function () {
-    updateTracePlayback();
     if (document.hidden) stop(); else start();
   });
   motion.addEventListener('change', function () {
@@ -239,7 +173,6 @@
   });
   var observer = new IntersectionObserver(function (entries) {
     visible = entries[0].isIntersecting;
-    updateTracePlayback();
     if (visible) start(); else stop();
   });
   observer.observe(hero);

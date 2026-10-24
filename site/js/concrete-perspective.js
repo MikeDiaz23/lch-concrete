@@ -1,19 +1,11 @@
-/* Project the static concrete texture onto the same plane as the hero grid. */
+/* Project the concrete texture onto its existing plane, without a visible grid. */
 (function () {
   'use strict';
   var surface = document.querySelector('.hero-concrete');
   var grid = surface && surface.querySelector('.studio-hero');
-  var traces = grid && grid.querySelector('.hero-traces');
-  if (!traces) return;
-  var paths = Array.from(traces.querySelectorAll('path'));
-  var vanishing = paths[0].getPointAtLength(0);
-  var crossSeam = paths.find(function (path) {
-    return path.getPointAtLength(0).y >= 0;
-  });
-  if (!crossSeam) return;
-  var start = crossSeam.getPointAtLength(0);
-  var end = crossSeam.getPointAtLength(crossSeam.getTotalLength());
-  var view = traces.viewBox.baseVal;
+  if (!grid) return;
+  var vanishing = { x: .52, y: -.75 };
+  var crossSlope = -.095;
   var canvas = document.createElement('canvas');
   canvas.className = 'concrete-perspective';
   canvas.setAttribute('aria-hidden', 'true');
@@ -51,10 +43,9 @@
     var resolution = Math.min(window.devicePixelRatio || 1, 1.5);
     canvas.width = Math.round(bounds.width * resolution);
     canvas.height = Math.round(bounds.height * resolution);
-    var vx = gridBounds.left - bounds.left + vanishing.x / view.width * gridBounds.width;
-    var vy = gridBounds.top - bounds.top + vanishing.y / view.height * gridBounds.height;
-    var slope = (end.y - start.y) / view.height * gridBounds.height /
-      ((end.x - start.x) / view.width * gridBounds.width);
+    var vx = gridBounds.left - bounds.left + vanishing.x * gridBounds.width;
+    var vy = gridBounds.top - bounds.top + vanishing.y * gridBounds.height;
+    var slope = crossSlope * gridBounds.height / gridBounds.width;
     var reference = gridBounds.height * .95;
     var tile = raster.width;
     var step = 1 / resolution;
