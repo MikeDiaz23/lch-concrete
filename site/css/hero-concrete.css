@@ -1,9 +1,9 @@
 /* Both themes share one concrete composite, including its contrast and shading. */
 .hero-concrete { position: relative; isolation: isolate; background: var(--paper); }
-html:not([data-theme='light']) .hero-concrete .hero-surface {
-  mask-image: radial-gradient(ellipse at center, #000 45%, transparent 95%);
+html .hero-concrete .hero-surface {
+  mask-image: radial-gradient(ellipse at center, #000 58%, transparent 100%);
 }
-html:not([data-theme='light']) .hero-concrete .hero-traces { z-index: -1; }
+.hero-concrete .hero-traces { z-index: -1; }
 .concrete-material {
   position: absolute;
   inset: 0;
