@@ -123,3 +123,6 @@ body.modern .hero-carousel-announcement { position: absolute; width: 1px; height
 .hero-quote-layout .studio-copy .actions .hero-call { gap: .625rem; }
 .hero-quote-layout .hero-call::after { content: none; }
 .hero-call svg { width: 1.125em; height: 1.125em; flex-shrink: 0; }
+
+/* Bold the three homepage hero highlights. */
+.hero-strip .hero-foot { font-weight: 700; }
