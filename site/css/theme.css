@@ -28,7 +28,7 @@
   .site-logo { min-width: 0; max-width: 100%; }
   .header-controls { order: 1; margin-left: auto; }
   .site-nav { order: 3; grid-column: 1 / -1; }
-  .nav-toggle { font-size: 11px; padding: 9px 10px; }
+  .nav-toggle { font-size: 0.6875rem; padding: 9px 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .theme-toggle::before { transition: none; }

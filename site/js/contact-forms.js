@@ -12,7 +12,11 @@
     var success = wrapper.querySelector('.w-form-done');
     var failure = wrapper.querySelector('.w-form-fail');
     var button = form.querySelector('[type="submit"]');
-    var originalLabel = button.value;
+    var originalLabel = button.tagName === 'INPUT' ? button.value : button.textContent;
+    function setButtonLabel(label) {
+      if (button.tagName === 'INPUT') button.value = label;
+      else button.textContent = label;
+    }
     function fail(message) {
       failure.textContent = message;
       failure.style.display = 'block';
@@ -33,7 +37,7 @@
     }
     form.dataset.submitting = 'true';
     button.disabled = true;
-    button.value = button.dataset.wait || 'Please wait...';
+    setButtonLabel(button.dataset.wait || 'Please wait...');
     try {
       var response = await fetch('/', {
         method: 'POST',
@@ -52,7 +56,7 @@
     } finally {
       form.dataset.submitting = 'false';
       button.disabled = false;
-      button.value = originalLabel;
+      setButtonLabel(originalLabel);
       if (window.grecaptcha) window.grecaptcha.reset();
     }
   }, true);

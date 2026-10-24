@@ -1,0 +1,43 @@
+/* Shared reading sizes, applied after the earlier visual direction. */
+html { font-size: 100%; }
+:root {
+  --font-reading: clamp(1rem, calc(.75rem + .25vw), 1.5rem);
+  --font-secondary: clamp(.875rem, calc(.625rem + .2vw), 1.25rem);
+  --font-navigation: clamp(.9375rem, calc(.625rem + .25vw), 1.5rem);
+}
+body.modern { font-size: var(--font-reading); line-height: 1.7; }
+body.modern :is(h1, h2, h3, h4, p, li, dd, dt, a, label, summary, small) { overflow-wrap: anywhere; }
+body.modern p:not(.review-quote),
+body.modern :is(.audience-panel li, .planning-grid dt, .planning-grid dd) {
+  font-size: var(--font-reading) !important;
+  line-height: 1.7 !important;
+}
+body.modern :is(.btn, input, select, textarea, .orbit-card > span:not(.tile-draft)) {
+  font-size: var(--font-reading) !important;
+}
+body.modern :is(.field input, .field select, .field textarea) { line-height: 1.5; padding: .75em; min-height: 3rem; }
+body.modern .field textarea { min-height: 7rem; height: auto; }
+body.modern .btn { min-height: 3rem; white-space: normal; }
+body.modern :is(.eyebrow, .hero-foot, .crumb, .text-link, .card-top, .additional-services,
+  .experience-tag span, .values, .project-info, .project-info span, .review-source,
+  .review-stars, .contact-person, .contact-person span, .contact-person strong,
+  .field label, .form-submit small, .footer-top h3, .footer-top p, .footer-top a,
+  .footer-bottom, .cities, .cities a, .hero-carousel-count, .hero-carousel-toggle) {
+  font-size: var(--font-secondary) !important;
+  line-height: 1.6;
+}
+body.modern .footer-top p { line-height: 1.7 !important; }
+body.modern .footer-top h3 { font-weight: 600; }
+body.modern .contact-email { font-size: var(--font-reading); }
+body.modern .site-nav { font-size: var(--font-navigation); line-height: 1.5; }
+body.modern .nav-toggle { font-size: .875rem; line-height: 1.5; min-height: 2.75rem; }
+body.modern .hero-carousel-controls { flex-wrap: wrap; }
+body.modern .hero-carousel-count { white-space: nowrap; }
+body.modern .hero-quote-panel .field.full { min-width: 0; }
+body.modern .form-submit small { max-width: 34ch; }
+body.modern .hero-quote-panel .form-submit small { max-width: none; }
+body.modern :is(.article-body, .quote-copy, .about-copy, .page-hero) p { max-width: 70ch; }
+body.modern .review-quote { line-height: 1.65; }
+@media (max-width: 420px) {
+  body.modern .studio-copy .actions .btn { width: 100%; }
+}

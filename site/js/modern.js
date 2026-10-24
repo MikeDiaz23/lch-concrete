@@ -3,7 +3,14 @@
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.site-nav');
   var dropdowns = Array.from(nav.querySelectorAll('.nav-drop'));
-  var hoverMenu = window.matchMedia('(min-width: 851px) and (hover: hover) and (pointer: fine)');
+  var hero = document.querySelector('.hero');
+  if (hero) {
+    var header = document.querySelector('.site-header');
+    new ResizeObserver(function () {
+      hero.style.setProperty('--hero-nav-height', header.offsetHeight + 'px');
+    }).observe(header);
+  }
+  var hoverMenu = window.matchMedia('(min-width: 1001px) and (hover: hover) and (pointer: fine)');
   var closeTimers = new WeakMap();
   function closeDropdown(dropdown) {
     window.clearTimeout(closeTimers.get(dropdown));

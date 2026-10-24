@@ -1,0 +1,64 @@
+/* Grow the content area through wide desktop and 5K-sized viewports. */
+:root {
+  --content-width: min(calc(100% - clamp(2.25rem, 8vw, 24rem)), calc(68rem + 40vw), 196rem);
+}
+body.modern .wrap { width: var(--content-width); }
+body.modern .site-logo { width: clamp(12rem, 16vw, 21rem); }
+body.modern .site-nav { gap: clamp(.875rem, 1.5vw, 1.5rem); }
+body.modern .nav-row { min-height: clamp(5rem, 5vw, 7.5rem); }
+body.modern .nav-panel { min-width: 16rem; }
+body.modern .hero-quote-layout .studio-copy h1 { max-width: none; }
+body.modern .hero .studio-hero.hero-quote-layout { column-gap: clamp(2rem, 3.5vw, 6rem); }
+body.modern .hero-quote-panel .form-grid { gap: 1rem; }
+body.modern :is(.form-grid, .quote-form, .quote-copy, .split > *, .quote-grid > *, .article-layout > *, .footer-top > *) { min-width: 0; }
+body.modern .quote-grid { max-width: 112rem; }
+body.modern .article-layout { max-width: 100rem; }
+body.modern .article-body { max-width: 72ch; }
+body.modern .footer-logo { width: clamp(13.75rem, 10vw, 20rem); }
+body.modern .footer-top p { max-width: 36ch; }
+body.modern .project-info { flex-wrap: wrap; }
+body.modern .hero-foot > * { min-width: 0; }
+/* Switch to the full-size menu before readable desktop links become cramped. */
+@media (max-width: 1000px) {
+  body.modern .nav-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: .75rem; min-height: 4.75rem; }
+  body.modern .header-controls { order: 1; margin-left: auto; }
+  body.modern .nav-toggle { display: block; }
+  body.modern .site-nav { display: none; order: 3; grid-column: 1 / -1; width: 100%; margin: 0; padding: 1rem 0; flex-direction: column; align-items: stretch; gap: 0; max-height: calc(100svh - 5rem); overflow-y: auto; overscroll-behavior: contain; }
+  body.modern .site-nav.is-open { display: flex; }
+  body.modern .site-nav > a, body.modern .nav-drop > summary { display: block; padding: .75rem 0; }
+  body.modern .site-nav > a.nav-cta { padding: .75rem; margin-top: .75rem; }
+  body.modern .nav-panel { position: static; min-width: 0; border: 0; box-shadow: none; padding: 0 0 0 1rem; }
+  body.modern .site-logo { max-width: 100%; }
+}
+@media (max-width: 600px) {
+  body.modern .nav-row { min-height: 4.5rem; }
+  body.modern .form-grid { grid-template-columns: minmax(0, 1fr); }
+  body.modern .footer-top { gap: 2rem 1rem; }
+  body.modern .hero .studio-hero.hero-quote-layout { padding-top: 2rem; }
+}
+@media (min-width: 1800px) {
+  body.modern .section-space { padding-block: clamp(5rem, 4vw, 10rem); }
+  body.modern .hero .studio-hero.hero-quote-layout { gap: clamp(3rem, 4vw, 6rem); padding-block: clamp(3rem, 4vw, 7rem); }
+  body.modern .hero-quote-layout .hero-title-primary { font-size: clamp(3.5rem, 2.8vw, 7rem); }
+  body.modern .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(2rem, 1.2vw, 3rem); }
+  body.modern .hero-quote-layout .hero-project-carousel .orbit-card img { height: clamp(18rem, 15vw, 34rem); }
+  body.modern .hero-quote-panel { padding: clamp(2rem, 2vw, 4rem); }
+  body.modern .hero-quote-panel h2 { font-size: clamp(2rem, 1.1vw, 3rem); }
+  body.modern h2 { font-size: clamp(2.5rem, 1.6vw, 4rem); }
+  body.modern .service-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; }
+  body.modern .service-card .photo-clip img { height: clamp(15rem, 11vw, 24rem); }
+  body.modern .service-card h3 { font-size: clamp(1.5rem, 1vw, 2.25rem) !important; }
+  body.modern .service-card p { max-width: 60ch; }
+  body.modern .article-layout { grid-template-columns: clamp(16rem, 16vw, 24rem) minmax(0, 1fr); gap: clamp(2rem, 4vw, 6rem); }
+  body.modern .article-aside { top: 10rem; }
+  body.modern .split { gap: clamp(3rem, 5vw, 8rem); }
+  body.modern .project-card img, body.modern .project-card:last-child img { height: clamp(22rem, 13vw, 36rem); }
+  body.modern .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  body.modern .gallery-grid img, body.modern .gallery-grid a:nth-child(5n+1) img, body.modern .gallery-grid a:nth-child(5n+2) img { height: clamp(20rem, 12vw, 34rem); }
+  body.modern .page-hero h1 { font-size: clamp(3.5rem, 2.3vw, 6rem); max-width: 24ch; }
+  body.modern .article-body :is(h2, h3) { font-size: clamp(1.75rem, 1vw, 2.5rem) !important; }
+  body.modern .project-hero-grid { gap: clamp(3rem, 5vw, 8rem); }
+}
+@media (min-width: 3000px) {
+  body.modern .hero-quote-panel .form-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, auto) minmax(0, 1fr) auto; }
+}
