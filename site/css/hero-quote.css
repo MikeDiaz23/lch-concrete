@@ -1,0 +1,69 @@
+/* A dedicated inquiry panel, with project photography beside it. */
+.hero .studio-hero.hero-quote-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  align-items: center;
+  align-content: center;
+  gap: 28px 56px;
+  padding: 48px 0 52px;
+}
+.hero-quote-layout .studio-copy { grid-column: 1; grid-row: 1; min-width: 0; width: 100%; justify-self: stretch; align-self: end; max-width: none; padding: 0; text-align: left; }
+.hero-quote-layout .studio-badge { margin-bottom: 22px; }
+.hero-quote-layout .hero-title-primary { font-size: clamp(42px, 4.1vw, 58px); }
+.hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(25px, 2.7vw, 34px); margin-top: 9px; }
+body.modern .hero-quote-layout .studio-copy .hero-services { max-width: 480px; margin: 22px 0 24px !important; }
+.hero-quote-layout .studio-copy .actions { justify-content: flex-start; flex-wrap: wrap; }
+.hero-projects { grid-column: 1; grid-row: 2; align-self: start; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 28px; margin: 8px 6px 0; }
+.hero-quote-layout .orbit-card { position: relative; inset: auto; display: block; width: 100%; max-width: none; }
+.hero-quote-layout .orbit-card img { height: clamp(110px, 9vw, 140px); }
+.hero-quote-layout .orbit-one { transform: rotate(-3deg); }
+.hero-quote-layout .orbit-two { transform: rotate(2deg); }
+.hero-quote-layout .orbit-three { transform: rotate(2deg); }
+.hero-quote-layout .orbit-four { transform: rotate(-2deg); }
+.hero-quote-layout .orbit-card:hover { transform: translateY(-4px) rotate(0deg); }
+.hero-quote-panel { grid-column: 2; grid-row: 1 / span 2; position: relative; z-index: 2; width: 100%; margin: 0; padding: 28px; box-shadow: 0 20px 60px #0002; scroll-margin-top: 100px; }
+body.modern .hero-quote-panel h2 { font-size: 29px; line-height: 1.15; margin: 0 0 10px; }
+body.modern .hero-quote-panel .hero-quote-intro { font-size: 13px; line-height: 1.6; color: var(--muted); margin: 0 0 22px; }
+.hero-quote-panel .form-grid { gap: 14px; }
+.hero-quote-panel .field label { font-size: 11px; margin-bottom: 6px; }
+.hero-quote-panel .field input, .hero-quote-panel .field select, .hero-quote-panel .field textarea { padding: 10px 12px; min-height: 44px; }
+.hero-quote-panel .field textarea { min-height: 80px; height: 80px; }
+.hero-quote-panel .form-submit { flex-direction: column-reverse; align-items: stretch; gap: 12px; margin-top: 18px; }
+.hero-quote-panel .form-submit .btn { width: 100%; min-height: 46px; font-size: 13px; white-space: normal; }
+.hero-quote-panel .form-submit small { max-width: none; text-align: center; font-size: 10px; line-height: 1.5; }
+@media (max-width: 1100px) {
+  .hero .studio-hero.hero-quote-layout { column-gap: 36px; }
+  .hero-quote-layout .hero-title-primary { font-size: 42px; }
+  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: 26px; }
+  .hero-quote-panel { padding: 24px; }
+  .hero-projects { gap: 20px; }
+  .hero-quote-layout .orbit-card span { font-size: 12px; }
+}
+@media (max-width: 950px) {
+  .hero .studio-hero.hero-quote-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; padding: 36px 0 44px; }
+  .hero-quote-layout .studio-copy { grid-column: 1; grid-row: 1; width: 100%; max-width: 620px; justify-self: center; }
+  .hero-quote-layout .hero-title-primary { font-size: clamp(42px, 7vw, 58px); }
+  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: 30px; }
+  .hero-quote-panel { grid-column: 1; grid-row: 2; max-width: 620px; justify-self: center; }
+  .hero-projects { grid-column: 1; grid-row: 3; width: calc(100% - 12px); margin: 8px 6px 0; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+  .hero-quote-layout .orbit-card img { height: 110px; }
+  .hero-quote-layout .orbit-card span { font-size: 11px; padding-inline: 2px; }
+}
+@media (max-width: 600px) {
+  .hero .studio-hero.hero-quote-layout { gap: 28px; padding: 30px 0 36px; }
+  .hero-quote-layout .hero-title-primary { font-size: clamp(36px, 10.4vw, 48px); }
+  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(24px, 6.6vw, 30px); }
+  body.modern .hero-quote-layout .studio-copy .hero-services { font-size: 15px !important; margin: 20px 0 22px !important; }
+  .hero-quote-layout .studio-copy .actions .btn { padding: 11px 15px; font-size: 12px; }
+  .hero-quote-panel { padding: 24px 18px; border-radius: 22px; }
+  body.modern .hero-quote-panel h2 { font-size: 27px; }
+  .hero-quote-panel .form-grid { gap: 14px 12px; }
+  .hero-projects { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .hero-quote-layout .orbit-card img { height: 140px; }
+  .hero-quote-layout .orbit-card span { font-size: 13px; }
+}
+@media (max-width: 360px) {
+  .hero-quote-panel .form-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-quote-layout .orbit-card img { height: 110px; }
+  .hero-quote-layout .orbit-card span { font-size: 11px; }
+}

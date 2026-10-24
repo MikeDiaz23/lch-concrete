@@ -23,12 +23,12 @@
     failure.style.display = 'none';
     success.style.display = 'none';
     var data = new FormData(form);
-    if (!data.get('g-recaptcha-response')) {
-      fail('Please complete the CAPTCHA before sending. You can also call 770-946-1697.');
-      return;
-    }
     if (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:') {
       fail('This preview cannot send messages. Please call 770-946-1697 or email ConcreteLCH@gmail.com.');
+      return;
+    }
+    if (!data.get('g-recaptcha-response')) {
+      fail('Please complete the CAPTCHA before sending. You can also call 770-946-1697.');
       return;
     }
     form.dataset.submitting = 'true';

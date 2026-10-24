@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="/css/studio.css?v=hero-cards-larger-2">
 <link rel="stylesheet" href="/css/theme.css?v=hero-sentence-1">
 <link rel="stylesheet" href="/css/hero-concrete.css?v=slab-edges-1">
+<link rel="stylesheet" href="/css/hero-quote.css?v=1">
 <script>
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.documentElement.classList.add('tile-intro-pending');
@@ -79,14 +80,14 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 </details>
 <a href="/gallery.html">Our work</a>
 <a href="tel:770-946-1697">770-946-1697</a>
-<a class="btn nav-cta" href="/contact.html">Get a free quote</a>
+<a class="btn nav-cta" href="#hero-quote">Get a free quote</a>
 </nav>
 </div>
 </header>
 <main id="main">
 <section class="hero hero-concrete">
 <div class="wrap">
-<div class="studio-hero">
+<div class="studio-hero hero-quote-layout">
 <canvas class="hero-surface" aria-hidden="true"></canvas>
 <div class="studio-copy reveal">
 <div class="studio-badge"><span class="studio-badge-number">20+</span><span class="studio-badge-label">years of concrete experience</span></div>
@@ -97,9 +98,75 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 <p class="hero-services">Concrete contracting services to build, repair, and restore driveways, patios &amp; pathways. Serving south of Atlanta, GA, and in surrounding cities.</p>
 <div class="actions">
 <a class="btn btn-outline" href="/gallery.html">Explore our work</a>
-<a class="btn" href="#quote">Get a free quote</a>
+<a class="btn" href="#hero-quote">Get a free quote</a>
 </div>
 </div>
+<aside class="hero-quote-panel quote-form w-form" id="hero-quote" aria-labelledby="hero-quote-title">
+<h2 id="hero-quote-title">Request a free quote</h2>
+<p class="hero-quote-intro">Share your project details and let's plan the next step.</p>
+<form id="wf-form-Hero-Quote" name="contact-index-hero" method="post" action="/thank-you.html" data-contact-form="true" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+<input type="hidden" name="form-name" value="contact-index-hero">
+<p hidden>
+<label>Leave blank<input name="bot-field" tabindex="-1" autocomplete="off">
+</label>
+</p>
+<div class="form-grid">
+<div class="field">
+<label for="hero-q-Name">Your name</label>
+<input id="hero-q-Name" name="Name" type="text" maxlength="256" required autocomplete="name">
+</div>
+<div class="field">
+<label for="hero-q-Phone">Phone number</label>
+<input id="hero-q-Phone" name="Phone" type="tel" maxlength="256" required autocomplete="tel">
+</div>
+<div class="field">
+<label for="hero-q-Email">Email address</label>
+<input id="hero-q-Email" name="Email" type="email" maxlength="256" required autocomplete="email">
+</div>
+<div class="field">
+<label for="hero-q-City">Project city</label>
+<input id="hero-q-City" name="City" type="text" maxlength="256" required autocomplete="address-level2">
+</div>
+<div class="field">
+<label for="hero-q-service">Service</label>
+<select id="hero-q-service" name="Service-Type">
+<option value="No Service Type">Select a service</option>
+<option>Driveways</option>
+<option>Foundations</option>
+<option>Patios</option>
+<option>Sidewalks</option>
+<option>Concrete Floor Cleaning</option>
+<option>Concrete Repair</option>
+<option>Other</option>
+</select>
+</div>
+<div class="field">
+<label for="hero-q-budget">Estimated budget</label>
+<select id="hero-q-budget" name="Budget">
+<option value="Budget">Select a budget</option>
+<option>Under $1000</option>
+<option>$1000 - $5000</option>
+<option>$5000 - $10,000</option>
+<option>$10,000+</option>
+</select>
+</div>
+<div class="field full">
+<label for="hero-q-message">Tell us about your project</label>
+<textarea id="hero-q-message" name="Message" maxlength="5000" required placeholder="What would you like to repair, build, or improve?">
+</textarea>
+</div>
+<div class="full" data-netlify-recaptcha="true">
+</div>
+</div>
+<div class="form-submit">
+<small>Your details are used to respond to your project inquiry.</small>
+<input class="btn" type="submit" value="Request a free quote ›" data-wait="Sending...">
+</div>
+</form>
+<div class="w-form-done" role="status">Thank you! Your submission has been received.</div>
+<div class="w-form-fail" role="alert">Your message could not be sent. Please try again or call 770-946-1697.</div>
+</aside>
+<div class="hero-projects" role="group" aria-label="Explore our concrete work">
 <a class="orbit-card orbit-one" href="/services/driveways.html" aria-label="Explore driveway services">
 <img src="/images/AdobeStock_63714628-Optimized.jpg" alt="Concrete driveway" width="280" height="250">
 <span>Driveways</span>
@@ -116,6 +183,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 <img src="/images/AdobeStock_75067836-Optimized.jpg" alt="Decorative concrete surface" width="280" height="250">
 <span>Decorative concrete</span>
 </a>
+</div>
 </div>
 </div>
 <div class="hero-strip" id="hero-highlights">
@@ -444,7 +512,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 <script src="/js/hero-surface.js?v=slab-edges-1"></script>
 <script src="/js/concrete-perspective.js?v=photo-1"></script>
 <script src="/js/hero-tiles.js"></script>
-<script src="/js/contact-forms.js">
+<script src="/js/contact-forms.js?v=local-preview-1">
 </script>
 </body>
 </html>

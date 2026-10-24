@@ -70,7 +70,7 @@ for css in ROOT.glob('css/*.css'):
     for value in re.findall(r'url\([\s\'"]*([^\)\'"\s]+)', css.read_text()):
         check_ref(css, value)
 names = [form['attrs']['name'] for form in forms]
-assert len(forms) == 10, f'Expected 10 inquiry forms, got {len(forms)}'
+assert len(forms) == 11, f'Expected 11 inquiry forms, got {len(forms)}'
 assert len(set(names)) == len(names), 'Contact form names must be unique'
 for form in forms:
     assert form['attrs']['method'] == 'post'

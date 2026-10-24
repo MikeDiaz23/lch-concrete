@@ -23,6 +23,7 @@ Open http://localhost:8000. No package installation or build framework is needed
 - `site/contact.html`, `site/gallery.html`: contact and gallery pages.
 - `site/about/` and `site/services/`: remaining content pages.
 - `site/css/modern.css`: current redesign styles; `lch-concrete.css` retains the original export styles.
+- `site/css/hero-quote.css`: homepage hero layout and quote panel.
 - `site/images/`: logos, photos, responsive variants, and gallery images.
 - `site/js/lch-concrete.js`: exported runtime, now used on the gallery for its lightboxes.
 - `site/js/contact-forms.js`: optional Netlify contact transport, separate from the exported runtime.
@@ -36,7 +37,7 @@ Namecheap remains the user's domain/provider choice; no DNS or Webflow hosting s
 An optional Netlify configuration is included because it offers a replacement for Webflow Forms. It is not deployed or connected. To use it later:
 
 1. Import this GitHub repository into Netlify; publish directory is `site` and validation runs from `netlify.toml`.
-2. Enable Forms detection and redeploy. Verify all 10 `contact-*` forms appear.
+2. Enable Forms detection and redeploy. Verify all 11 `contact-*` forms, including `contact-index-hero`, appear.
 3. Configure submission email notifications to the confirmed business recipient. The address displayed on the site is `ConcreteLCH@gmail.com`; notifications are not configured by this repository.
 4. Test CAPTCHA, successful submissions, inbox delivery, error handling, clean URLs, mobile navigation, gallery lightboxes, and animations on the preview domain.
 5. Connect `www.lchconcrete.com` and `lchconcrete.com`, then update the applicable Namecheap DNS records according to the selected host. Keep existing email records.

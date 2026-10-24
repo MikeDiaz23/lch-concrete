@@ -2,7 +2,7 @@
 
 Branch: `redesign/modern-site`. The original Webflow migration remains on `main`. Hosting and domain changes remain deferred.
 
-The current direction draws on https://libraries.dev/: a charcoal background, compact Inter typography, centered hero, rounded frames, subtle borders, and restrained hover effects. LCH's red logo icon remains consistent in both themes, with white lettering on dark surfaces and dark lettering on light surfaces. The homepage surrounds its service-focused message with linked project-photo cards rather than software demos. Existing project photos lead the homepage and gallery. Business name, logo, contact details, operations manager, service areas, service descriptions, customer quotes, analytics ID, routes, gallery images, and inquiry fields remain available.
+The current direction draws on https://libraries.dev/: a charcoal background, compact Inter typography, a split hero with a quote panel, rounded frames, subtle borders, and restrained hover effects. LCH's red logo icon remains consistent in both themes, with white lettering on dark surfaces and dark lettering on light surfaces. The homepage pairs its service-focused introduction and four linked project-photo cards with a quote request form. Existing project photos lead the homepage and gallery. Business name, logo, contact details, operations manager, service areas, service descriptions, customer quotes, analytics ID, routes, gallery images, and inquiry fields remain available.
 
 All 13 pages share the new header, navigation, footer, typography, and spacing. The homepage is rebuilt around services, local experience, completed projects, customer quotes, and the quote request. Service and community pages retain their original descriptive content in readable article layouts. The gallery retains its 26 exported lightboxes and runtime. The new navigation uses keyboard-accessible native dropdowns and a mobile menu with Escape dismissal. Reduced-motion settings disable entrance effects.
 
@@ -22,7 +22,7 @@ Every header includes a sun/moon switch with a keyboard-accessible “Light mode
 
 ## Validation
 
-- Python site validation passes for all 13 pages, local assets, responsive references, lightbox image data, and all 10 inquiry forms.
+- Python site validation passes for all 13 pages, local assets, responsive references, lightbox image data, and all 11 inquiry forms.
 - Browser layout checks pass at 390px, 768px, and 1440px for the homepage, contact, gallery, patio service, and community pages, with no document overflow or broken eager-loaded images.
 - Browser interaction checks pass for mobile menu toggle, Escape dismissal, outside-click dropdown dismissal, gallery opening and Escape closing, and the inquiry form's missing-CAPTCHA error.
 - Every page has one main heading, unique IDs, and valid label targets.
@@ -60,4 +60,11 @@ The hero pairs a medium-weight Inter first line (Concrete services) with a warm 
 
 ## Opening viewport strip
 
-The hero uses a viewport-height flex layout so its full-width highlights strip sits at the bottom of the opening browser view. The strip remains a static element in document flow and scrolls away with the page. Compact height rules adjust spacing and photo crops on shorter screens while retaining readable tile labels and all three strip items. The narrow mobile header keeps the logo and menu on one row. Browser checks cover initial bottom alignment, natural scrolling, and layout fit across desktop, tablet, and phone viewports.
+The hero uses a minimum viewport-height flex layout. On taller desktop screens, its full-width highlights strip sits at the bottom of the opening browser view. The hero expands when the quote form and project cards need more room. The strip remains in normal document flow and scrolls away with the page. At tablet and phone widths the introduction, form, and project cards stack in that order. All four cards remain available. The narrow mobile header keeps the logo and menu on one row.
+
+
+## Homepage hero quote form
+
+`site/css/hero-quote.css` is loaded only on the homepage. A two-column grid places the introduction and four project cards beside a dedicated quote panel. Below 950px it stacks the introduction, form, and project cards, with matching DOM and keyboard order. Form fields use the existing light and dark palettes. At narrow phone widths, paired fields become a single column. The original lower-page form remains available at `#quote`; the new form is `#hero-quote`, with unique control IDs and Netlify name `contact-index-hero`. Homepage quote actions target the new panel.
+
+The hero collects the same inquiry fields as the existing forms and reuses their honeypot, CAPTCHA placeholder, validation, and transport. Local previews show a clear message without sending a POST. Submission states and payload encoding can be checked with mocked transport, but real delivery still requires the deferred hosting and form backend setup.
