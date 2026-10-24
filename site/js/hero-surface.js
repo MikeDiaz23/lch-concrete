@@ -6,6 +6,15 @@
   if (!canvas) return;
   var context = canvas.getContext('2d');
   if (!context) return;
+  var material = hero.closest('.hero-concrete');
+  material = material && material.querySelector('.concrete-material');
+  if (!material) return;
+  var joints = document.createElement('canvas');
+  joints.className = 'concrete-joints';
+  joints.setAttribute('aria-hidden', 'true');
+  var jointContext = joints.getContext('2d');
+  if (!jointContext) return;
+  material.appendChild(joints);
   var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var width = 0;
   var height = 0;
@@ -63,6 +72,7 @@
     canvas.width = Math.round(width * scale);
     canvas.height = Math.round(height * scale);
     context.setTransform(scale, 0, 0, scale, 0, 0);
+    drawJoints(rect, scale);
     grains = [];
     var count = Math.min(1400, Math.round(width * height / 650));
     for (var i = 0; i < count; i++) {
@@ -73,6 +83,31 @@
     light.y = height * .65;
     trail = [];
     draw();
+  }
+
+  // Draw the approved dark seams once, beneath the shared lightness adjustment.
+  function drawJoints(rect, scale) {
+    var bounds = material.getBoundingClientRect();
+    joints.style.left = rect.left - bounds.left + 'px';
+    joints.style.top = rect.top - bounds.top + 'px';
+    joints.style.width = width + 'px';
+    joints.style.height = height + 'px';
+    joints.width = Math.round(width * scale);
+    joints.height = Math.round(height * scale);
+    jointContext.setTransform(scale, 0, 0, scale, 0, 0);
+    gridLines.forEach(function (line) {
+      function seam(lineWidth, tone, offsetX, offsetY) {
+        jointContext.lineWidth = lineWidth;
+        jointContext.strokeStyle = tone;
+        jointContext.beginPath();
+        jointContext.moveTo(line[0] * width + offsetX, line[1] * height + offsetY);
+        jointContext.lineTo(line[2] * width + offsetX, line[3] * height + offsetY);
+        jointContext.stroke();
+      }
+      seam(4, 'rgba(8,10,8,.22)', 0, 0);
+      seam(1, 'rgba(224,224,207,.4)', 1.2, 1.4);
+      seam(2, 'rgba(8,10,8,.82)', 0, 0);
+    });
   }
 
   function draw() {
@@ -86,27 +121,6 @@
     wash.addColorStop(1, 'rgba(' + washTone + ',0)');
     context.fillStyle = wash;
     context.fillRect(0, 0, width, height);
-
-    // A recessed joint and its lit lower edge separate the concrete slabs.
-    gridLines.forEach(function (line) {
-      function seam(lineWidth, tone, offsetX, offsetY) {
-        context.lineWidth = lineWidth;
-        context.strokeStyle = tone;
-        context.beginPath();
-        context.moveTo(line[0] * width + offsetX, line[1] * height + offsetY);
-        context.lineTo(line[2] * width + offsetX, line[3] * height + offsetY);
-        context.stroke();
-      }
-      if (lightTheme) {
-        seam(4, 'rgba(50,53,48,.08)', 0, 0);
-        seam(1, 'rgba(255,255,248,.82)', 1.2, 1.4);
-        seam(1.7, 'rgba(69,73,65,.5)', 0, 0);
-      } else {
-        seam(4, 'rgba(8,10,8,.22)', 0, 0);
-        seam(1, 'rgba(224,224,207,.4)', 1.2, 1.4);
-        seam(2, 'rgba(8,10,8,.82)', 0, 0);
-      }
-    });
 
     grains.forEach(function (grain) {
       var dx = grain.x - light.x;
