@@ -10,7 +10,7 @@
 .hero-quote-layout .studio-copy { grid-column: 1; grid-row: 1; min-width: 0; width: 100%; justify-self: stretch; align-self: center; max-width: none; padding: 0; text-align: left; }
 .hero-quote-layout .studio-badge { margin-bottom: 22px; }
 .hero-quote-layout .hero-title-primary { font-size: clamp(2.4375rem, 3.8vw, 3.375rem); font-weight: 800; }
-.hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(1.5625rem, 2.7vw, 2.125rem); font-weight: 700; margin-top: 9px; }
+.hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700; margin-top: 9px; }
 body.modern .hero-quote-layout .studio-copy .hero-services { max-width: 480px; margin: 22px 0 24px !important; }
 .hero-quote-layout .studio-copy .actions { justify-content: flex-start; flex-wrap: wrap; }
 .hero-quote-layout .orbit-card { position: relative; inset: auto; display: block; width: 100%; max-width: none; transform: none; }
@@ -28,7 +28,7 @@ body.modern .hero-quote-panel .hero-quote-intro { font-size: 0.8125rem; line-hei
 @media (max-width: 1100px) {
   .hero .studio-hero.hero-quote-layout { column-gap: 36px; }
   .hero-quote-layout .hero-title-primary { font-size: 2.4375rem; }
-  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: 1.625rem; }
+  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: 1.5rem; }
   .hero-quote-panel { padding: 24px; }
   .hero-quote-layout .orbit-card span { font-size: 0.75rem; }
 }
@@ -36,14 +36,14 @@ body.modern .hero-quote-panel .hero-quote-intro { font-size: 0.8125rem; line-hei
   .hero .studio-hero.hero-quote-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; padding: 36px 0 44px; }
   .hero-quote-layout .studio-copy { grid-column: 1; grid-row: 1; width: 100%; max-width: 620px; justify-self: center; }
   .hero-quote-layout .hero-title-primary { font-size: clamp(2.4375rem, 6.5vw, 3.375rem); }
-  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: 1.875rem; }
+  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: 1.75rem; }
   .hero-quote-panel { grid-column: 1; grid-row: 2; max-width: 620px; justify-self: center; }
   .hero-quote-layout .orbit-card span { font-size: 0.6875rem; padding-inline: 2px; }
 }
 @media (max-width: 600px) {
   .hero .studio-hero.hero-quote-layout { gap: 28px; padding: 30px 0 36px; }
   .hero-quote-layout .hero-title-primary { font-size: clamp(2.125rem, 9.6vw, 2.8125rem); }
-  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(1.5rem, 6.6vw, 1.875rem); }
+  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(1.375rem, 6.2vw, 1.75rem); }
   body.modern .hero-quote-layout .studio-copy .hero-services { font-size: 0.9375rem !important; margin: 20px 0 22px !important; }
   .hero-quote-layout .studio-copy .actions .btn { padding: 11px 15px; font-size: 0.75rem; }
   .hero-quote-panel { padding: 24px 18px; border-radius: 22px; }
@@ -100,7 +100,7 @@ body.modern .hero-carousel-announcement { position: absolute; width: 1px; height
   .hero-quote-layout .studio-copy { align-self: stretch; display: flex; flex-direction: column; padding-bottom: 0; }
   .hero-quote-layout .studio-badge { align-self: flex-start; margin-bottom: 18px; }
   .hero-quote-layout .hero-title-primary { font-size: clamp(2.4375rem, 3.8vw, 3.25rem); }
-  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(1.625rem, 2.6vw, 2rem); }
+  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(1.5rem, 2.4vw, 1.875rem); }
   .hero-project-carousel { width: 100%; margin: 22px 0 0; }
   .hero-carousel-stage { padding: 0; }
   .hero-carousel-controls { padding: 0; margin-top: 12px; }
