@@ -10,7 +10,7 @@
 .hero-quote-layout .studio-copy { grid-column: 1; grid-row: 1; min-width: 0; width: 100%; justify-self: stretch; align-self: center; max-width: none; padding: 0; text-align: left; }
 .hero-quote-layout .studio-badge { margin-bottom: 22px; }
 .hero-quote-layout .hero-title-primary { font-size: clamp(2.625rem, 4.1vw, 3.625rem); font-weight: 800; }
-.hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(1.5625rem, 2.7vw, 2.125rem); margin-top: 9px; }
+.hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(1.5625rem, 2.7vw, 2.125rem); font-weight: 700; margin-top: 9px; }
 body.modern .hero-quote-layout .studio-copy .hero-services { max-width: 480px; margin: 22px 0 24px !important; }
 .hero-quote-layout .studio-copy .actions { justify-content: flex-start; flex-wrap: wrap; }
 .hero-quote-layout .orbit-card { position: relative; inset: auto; display: block; width: 100%; max-width: none; transform: none; }
