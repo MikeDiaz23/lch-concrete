@@ -1,23 +1,25 @@
-/* The same concrete material in both themes, fading into the page below. */
-.hero-concrete { position: relative; isolation: isolate; }
+/* Both themes share one concrete composite, including its contrast and shading. */
+.hero-concrete { position: relative; isolation: isolate; background: var(--paper); }
 html:not([data-theme='light']) .hero-concrete .hero-surface {
   mask-image: radial-gradient(ellipse at center, #000 45%, transparent 95%);
 }
 html:not([data-theme='light']) .hero-concrete .hero-traces { z-index: -1; }
-html:not([data-theme='light']) .hero-concrete {
-  position: relative;
+.concrete-material {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   isolation: isolate;
+  pointer-events: none;
   background:
     radial-gradient(ellipse at 50% 43%, #12121240, transparent 65%),
     radial-gradient(ellipse at 14% 12%, #8c8e8114, transparent 55%),
     linear-gradient(180deg, #41423f 0%, #343632 24%, #292b27 50%, #1d1f1b 73%, #121212 98%);
 }
-.hero-concrete::before {
+.concrete-material::before {
   content: '';
   position: absolute;
   inset: 0;
-  z-index: -1;
-  pointer-events: none;
+  z-index: 0;
   background: url('/images/concrete-photo-v1.jpg') repeat;
   background-size: 1024px 1024px;
   mix-blend-mode: soft-light;
@@ -25,11 +27,11 @@ html:not([data-theme='light']) .hero-concrete {
   mask-image: linear-gradient(180deg, #000 0%, #000 48%, transparent 96%);
 }
 .concrete-perspective { display: none; }
-.hero-concrete.concrete-perspective-ready::before { content: none; }
+.hero-concrete.concrete-perspective-ready .concrete-material::before { content: none; }
 .hero-concrete .concrete-perspective {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   height: 100%;
   display: block;
@@ -38,14 +40,12 @@ html:not([data-theme='light']) .hero-concrete {
   opacity: .6;
   mask-image: linear-gradient(180deg, #000 0%, #000 48%, transparent 96%);
 }
-
-/* A pale grey wash keeps the pores and trowel marks quiet in daylight. */
-html[data-theme='light'] .hero-concrete {
-  background: linear-gradient(180deg, #f7f7f5 0%, #f4f5f2 48%, var(--paper) 98%);
-}
-html[data-theme='light'] .hero-concrete::before,
-html[data-theme='light'] .hero-concrete .concrete-perspective {
-  mix-blend-mode: multiply;
-  filter: grayscale(1);
-  opacity: .12;
+/* Add neutral light after compositing; do not wash out or invert the grain. */
+html[data-theme='light'] .concrete-material::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, #aaaaaa 0%, #c5c5c5 48%, #e3e3e3 98%);
+  mix-blend-mode: plus-lighter;
 }

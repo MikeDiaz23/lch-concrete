@@ -19,7 +19,7 @@
   canvas.setAttribute('aria-hidden', 'true');
   var context = canvas.getContext('2d');
   if (!context) return;
-  surface.prepend(canvas);
+  surface.querySelector('.concrete-material').prepend(canvas);
   var texture = new Image();
   var raster;
   var loading = false;
