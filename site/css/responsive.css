@@ -41,7 +41,6 @@ body.modern .hero-foot > * { min-width: 0; }
   body.modern .hero .studio-hero.hero-quote-layout { gap: clamp(3rem, 4vw, 6rem); padding-block: clamp(3rem, 4vw, 7rem); }
   body.modern .hero-quote-layout .hero-title-primary { font-size: clamp(3.5rem, 2.8vw, 7rem); }
   body.modern .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(2rem, 1.2vw, 3rem); }
-  body.modern .hero-quote-layout .hero-project-carousel .orbit-card img { height: clamp(18rem, 15vw, 34rem); }
   body.modern .hero-quote-panel { padding: clamp(2rem, 2vw, 4rem); }
   body.modern .hero-quote-panel h2 { font-size: clamp(2rem, 1.1vw, 3rem); }
   body.modern h2 { font-size: clamp(2.5rem, 1.6vw, 4rem); }

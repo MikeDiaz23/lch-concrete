@@ -14,7 +14,6 @@
 body.modern .hero-quote-layout .studio-copy .hero-services { max-width: 480px; margin: 22px 0 24px !important; }
 .hero-quote-layout .studio-copy .actions { justify-content: flex-start; flex-wrap: wrap; }
 .hero-quote-layout .orbit-card { position: relative; inset: auto; display: block; width: 100%; max-width: none; transform: none; }
-.hero-quote-layout .orbit-card img { height: 210px; }
 .hero-quote-layout .orbit-card:hover { transform: translateY(-4px); }
 .hero-quote-panel { grid-column: 2; grid-row: 1; position: relative; z-index: 2; width: 100%; margin: 0; padding: 28px; box-shadow: 0 20px 60px #0002; scroll-margin-top: 100px; }
 body.modern .hero-quote-panel h2 { font-size: 1.8125rem; font-weight: 700; line-height: 1.15; margin: 0 0 10px; }
@@ -39,7 +38,6 @@ body.modern .hero-quote-panel .hero-quote-intro { font-size: 0.8125rem; line-hei
   .hero-quote-layout .hero-title-primary { font-size: clamp(2.625rem, 7vw, 3.625rem); }
   .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: 1.875rem; }
   .hero-quote-panel { grid-column: 1; grid-row: 2; max-width: 620px; justify-self: center; }
-  .hero-quote-layout .orbit-card img { height: 210px; }
   .hero-quote-layout .orbit-card span { font-size: 0.6875rem; padding-inline: 2px; }
 }
 @media (max-width: 600px) {
@@ -62,6 +60,8 @@ body.modern .hero-quote-panel .hero-quote-intro { font-size: 0.8125rem; line-hei
 .hero-project-carousel { position: relative; width: min(100%, 390px); margin: 24px 0; }
 .hero-carousel-stage { padding: 10px; }
 .hero-quote-layout .hero-project-carousel .orbit-card { margin: 0; }
+/* Keep every project fully visible in a stable frame as the carousel grows. */
+.hero-quote-layout .hero-project-carousel .orbit-card img { height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: var(--panel); }
 .hero-quote-layout .hero-project-carousel .orbit-card span { font-size: 0.875rem; }
 .hero-carousel-slide { animation: hero-project-arrive .6s ease both; }
 .hero-carousel-controls { display: flex; align-items: center; justify-content: flex-start; gap: 8px; padding: 0 10px; margin-top: 8px; }
@@ -73,7 +73,6 @@ body.modern .hero-carousel-announcement { position: absolute; width: 1px; height
 @keyframes hero-project-arrive { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 @media (max-width: 600px) {
   .hero-project-carousel { width: min(100%, 360px); margin: 22px 0; }
-  .hero-quote-layout .hero-project-carousel .orbit-card img { height: 190px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-carousel-slide { animation: none; }
@@ -88,7 +87,6 @@ body.modern .hero-carousel-announcement { position: absolute; width: 1px; height
   .hero-project-carousel { width: 100%; margin: 22px 0 0; }
   .hero-carousel-stage { padding: 0; }
   .hero-quote-layout .hero-project-carousel .orbit-card { scale: 1; }
-  .hero-quote-layout .hero-project-carousel .orbit-card img { height: 220px; }
   .hero-carousel-controls { padding: 0; margin-top: 12px; }
   body.modern .hero-quote-layout .studio-copy .hero-services { max-width: none; margin: 20px 0 22px !important; }
   .hero-quote-layout .studio-copy .actions { margin-top: 20px; }
