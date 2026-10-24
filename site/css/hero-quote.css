@@ -17,7 +17,7 @@ body.modern .hero-quote-layout .studio-copy .hero-services { max-width: 480px; m
 .hero-quote-layout .orbit-card img { height: 210px; }
 .hero-quote-layout .orbit-card:hover { transform: translateY(-4px); }
 .hero-quote-panel { grid-column: 2; grid-row: 1; position: relative; z-index: 2; width: 100%; margin: 0; padding: 28px; box-shadow: 0 20px 60px #0002; scroll-margin-top: 100px; }
-body.modern .hero-quote-panel h2 { font-size: 29px; line-height: 1.15; margin: 0 0 10px; }
+body.modern .hero-quote-panel h2 { font-size: 29px; font-weight: 700; line-height: 1.15; margin: 0 0 10px; }
 body.modern .hero-quote-panel .hero-quote-intro { font-size: 13px; line-height: 1.6; color: var(--muted); margin: 0 0 22px; }
 .hero-quote-panel .form-grid { gap: 14px; }
 .hero-quote-panel .field label { font-size: 11px; margin-bottom: 6px; }
