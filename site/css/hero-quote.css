@@ -60,19 +60,24 @@ body.modern .hero-quote-panel .hero-quote-intro { font-size: 0.8125rem; line-hei
 .hero-project-carousel { position: relative; width: min(100%, 390px); margin: 24px 0; }
 .hero-carousel-stage { padding: 10px; }
 .hero-quote-layout .hero-project-carousel .orbit-card { margin: 0; min-width: 0; scale: 1; }
-/* Let each photo define its frame's height so there are no empty image bands. */
+/* A shared frame keeps the carousel steady while each photo fills its bounds. */
 .hero-project-image {
   position: relative;
   width: 100%;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   border-radius: 14px;
 }
 .hero-quote-layout .hero-project-carousel .orbit-card img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: 100%;
-  aspect-ratio: auto;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .hero-quote-layout .hero-project-carousel .orbit-card span { font-size: 0.875rem; }
 .hero-carousel-slide { animation: hero-project-arrive .6s ease both; }
