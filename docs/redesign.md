@@ -75,3 +75,8 @@ The hero collects the same inquiry fields as the existing forms and reuses their
 `site/js/hero-carousel.js` rotates one linked project card directly below the Residential & Commercial title and before the supporting copy. The four original project photos, labels, and service links remain. Only the active slide is visible or keyboard reachable. Previous and next chevrons, a counter, and a Play/Pause control sit below the card. Manual browsing pauses rotation until Play is selected. Automatic changes are not announced; manual changes update a polite status message.
 
 Rotation uses a six-second timeout and pauses on pointer hover, keyboard focus, document hiding, and when the carousel is offscreen. Reduced-motion preferences start the carousel paused and remove transition motion. With JavaScript unavailable, the first linked project remains visible and the controls stay hidden. The existing tile-sketch intro is retained for the first card only.
+
+
+## Balanced desktop hero columns
+
+Above 950px, the introduction and quote panel use equal-width columns with matching top and bottom edges. The upright project card fills the left column, and its controls align with the headline and supporting copy. Desktop field heights and labels are larger, and the message area grows with the panel rather than leaving unused space. The left actions align with the form submit button. Tablet and phone widths retain the stacked layout and compact field sizing. Rules remain scoped to the homepage in `site/css/hero-quote.css`.

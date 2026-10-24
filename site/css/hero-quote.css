@@ -1,10 +1,10 @@
 /* A dedicated inquiry panel, with project photography beside it. */
 .hero .studio-hero.hero-quote-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
   align-content: center;
-  gap: 28px 56px;
+  gap: 28px 48px;
   padding: 48px 0 52px;
 }
 .hero-quote-layout .studio-copy { grid-column: 1; grid-row: 1; min-width: 0; width: 100%; justify-self: stretch; align-self: center; max-width: none; padding: 0; text-align: left; }
@@ -77,4 +77,29 @@ body.modern .hero-carousel-announcement { position: absolute; width: 1px; height
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-carousel-slide { animation: none; }
+}
+
+/* Give both desktop columns the same edges and align their primary actions. */
+@media (min-width: 951px) {
+  .hero-quote-layout .studio-copy { align-self: stretch; display: flex; flex-direction: column; padding-bottom: 60px; }
+  .hero-quote-layout .studio-badge { align-self: flex-start; margin-bottom: 18px; }
+  .hero-quote-layout .hero-title-primary { font-size: clamp(42px, 4.1vw, 56px); }
+  .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(26px, 2.6vw, 32px); }
+  .hero-project-carousel { width: 100%; margin: 22px 0 0; }
+  .hero-carousel-stage { padding: 0; }
+  .hero-quote-layout .hero-project-carousel .orbit-card { scale: 1; }
+  .hero-quote-layout .hero-project-carousel .orbit-card img { height: 220px; }
+  .hero-carousel-controls { padding: 0; margin-top: 12px; }
+  body.modern .hero-quote-layout .studio-copy .hero-services { max-width: none; margin: 20px 0 22px !important; }
+  .hero-quote-layout .studio-copy .actions { margin-top: auto; }
+  .hero-quote-panel { align-self: stretch; display: flex; flex-direction: column; padding: 32px; }
+  body.modern .hero-quote-panel h2 { font-size: 30px; }
+  .hero-quote-panel form { display: flex; flex-direction: column; flex: 1; }
+  .hero-quote-panel .form-grid { flex: 1; gap: 18px; grid-template-rows: repeat(3, auto) minmax(0, 1fr) auto; }
+  .hero-quote-panel .field label { font-size: 12px; }
+  .hero-quote-panel .field input, .hero-quote-panel .field select { min-height: 48px; }
+  .hero-quote-panel .field input, .hero-quote-panel .field select, .hero-quote-panel .field textarea { font-size: 13px !important; }
+  .hero-quote-panel .field.full { display: flex; flex-direction: column; }
+  .hero-quote-panel .field textarea { flex: 1; min-height: 128px; height: auto; }
+  .hero-quote-panel .form-submit { margin-top: 22px; }
 }
