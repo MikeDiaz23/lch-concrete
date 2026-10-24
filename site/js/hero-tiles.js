@@ -2,7 +2,9 @@
 (function () {
   'use strict';
   var root = document.documentElement;
-  var cards = Array.from(document.querySelectorAll('.studio-hero .orbit-card'));
+  var cards = Array.from(document.querySelectorAll('.studio-hero .orbit-card')).filter(function (card) {
+    return card.getClientRects().length > 0;
+  });
   var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var timer;
   var alreadyFocused = document.activeElement && document.activeElement !== document.body && document.activeElement !== root;

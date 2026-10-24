@@ -2,7 +2,7 @@
 
 Branch: `redesign/modern-site`. The original Webflow migration remains on `main`. Hosting and domain changes remain deferred.
 
-The current direction draws on https://libraries.dev/: a charcoal background, compact Inter typography, a split hero with a quote panel, rounded frames, subtle borders, and restrained hover effects. LCH's red logo icon remains consistent in both themes, with white lettering on dark surfaces and dark lettering on light surfaces. The homepage pairs its service-focused introduction and four linked project-photo cards with a quote request form. Existing project photos lead the homepage and gallery. Business name, logo, contact details, operations manager, service areas, service descriptions, customer quotes, analytics ID, routes, gallery images, and inquiry fields remain available.
+The current direction draws on https://libraries.dev/: a charcoal background, compact Inter typography, a split hero with a quote panel, rounded frames, subtle borders, and restrained hover effects. LCH's red logo icon remains consistent in both themes, with white lettering on dark surfaces and dark lettering on light surfaces. The homepage pairs its service-focused introduction and a rotating linked project-photo card with a quote request form. Existing project photos lead the homepage and gallery. Business name, logo, contact details, operations manager, service areas, service descriptions, customer quotes, analytics ID, routes, gallery images, and inquiry fields remain available.
 
 All 13 pages share the new header, navigation, footer, typography, and spacing. The homepage is rebuilt around services, local experience, completed projects, customer quotes, and the quote request. Service and community pages retain their original descriptive content in readable article layouts. The gallery retains its 26 exported lightboxes and runtime. The new navigation uses keyboard-accessible native dropdowns and a mobile menu with Escape dismissal. Reduced-motion settings disable entrance effects.
 
@@ -48,7 +48,7 @@ Browser checks passed for ambient and pointer animation, the quote/gallery CTA h
 
 ## Hero tile entrance
 
-`site/js/hero-tiles.js` gives the four homepage tiles a staggered construction-sketch reveal on each page load. The outlines and slab joints draw first, followed by a soft photo fade, with 110ms between tiles. The sequence takes roughly two and a half seconds and preserves the settled positions, tilts, and hover styles. Decorative SVG sketches are removed afterward. Any pointer, keyboard, or focus interaction skips the intro immediately. Reduced-motion preferences bypass it, and a short fallback restores visibility if the script fails to load.
+`site/js/hero-tiles.js` gives the initially visible homepage project card a construction-sketch reveal on page load. Hidden carousel slides are excluded from the sketch so the drawing matches the visible image bounds. The outlines and slab joints draw first, followed by a soft photo fade. The sequence takes roughly two and a half seconds and preserves the settled position, tilt, and hover styles. Decorative SVG sketches are removed afterward. Any pointer, keyboard, or focus interaction skips the intro immediately. Reduced-motion preferences bypass it, and a short fallback restores visibility if the script fails to load.
 
 The sketch/photo handoff uses matching image bounds and a synchronized 850ms crossfade. Image decoding is attempted before the intro (with a short time limit), and the photo retains its normal sharpness and color throughout to avoid a snap at completion.
 
@@ -60,11 +60,18 @@ The hero pairs a medium-weight Inter first line (Concrete services) with a warm 
 
 ## Opening viewport strip
 
-The hero uses a minimum viewport-height flex layout. On taller desktop screens, its full-width highlights strip sits at the bottom of the opening browser view. The hero expands when the quote form and project cards need more room. The strip remains in normal document flow and scrolls away with the page. At tablet and phone widths the introduction, form, and project cards stack in that order. All four cards remain available. The narrow mobile header keeps the logo and menu on one row.
+The hero uses a minimum viewport-height flex layout. On taller desktop screens, its full-width highlights strip sits at the bottom of the opening browser view. The hero expands when the quote form and project cards need more room. The strip remains in normal document flow and scrolls away with the page. At tablet and phone widths the introduction with its carousel stacks above the quote form. All four projects remain available through the carousel. The narrow mobile header keeps the logo and menu on one row.
 
 
 ## Homepage hero quote form
 
-`site/css/hero-quote.css` is loaded only on the homepage. A two-column grid places the introduction and four project cards beside a dedicated quote panel. Below 950px it stacks the introduction, form, and project cards, with matching DOM and keyboard order. Form fields use the existing light and dark palettes. At narrow phone widths, paired fields become a single column. The original lower-page form remains available at `#quote`; the new form is `#hero-quote`, with unique control IDs and Netlify name `contact-index-hero`. Homepage quote actions target the new panel.
+`site/css/hero-quote.css` is loaded only on the homepage. A two-column grid places the introduction with its project carousel beside a dedicated quote panel. Below 950px it stacks the introduction and form, with matching DOM and keyboard order. Form fields use the existing light and dark palettes. At narrow phone widths, paired fields become a single column. The original lower-page form remains available at `#quote`; the new form is `#hero-quote`, with unique control IDs and Netlify name `contact-index-hero`. Homepage quote actions target the new panel.
 
 The hero collects the same inquiry fields as the existing forms and reuses their honeypot, CAPTCHA placeholder, validation, and transport. Local previews show a clear message without sending a POST. Submission states and payload encoding can be checked with mocked transport, but real delivery still requires the deferred hosting and form backend setup.
+
+
+## Single-card hero carousel
+
+`site/js/hero-carousel.js` rotates one linked project card directly below the Residential & Commercial title and before the supporting copy. The four original project photos, labels, and service links remain. Only the active slide is visible or keyboard reachable. Previous and next chevrons, a counter, and a Play/Pause control sit below the card. Manual browsing pauses rotation until Play is selected. Automatic changes are not announced; manual changes update a polite status message.
+
+Rotation uses a six-second timeout and pauses on pointer hover, keyboard focus, document hiding, and when the carousel is offscreen. Reduced-motion preferences start the carousel paused and remove transition motion. With JavaScript unavailable, the first linked project remains visible and the controls stay hidden. The existing tile-sketch intro is retained for the first card only.

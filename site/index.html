@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="/css/studio.css?v=hero-cards-larger-2">
 <link rel="stylesheet" href="/css/theme.css?v=hero-sentence-1">
 <link rel="stylesheet" href="/css/hero-concrete.css?v=slab-edges-1">
-<link rel="stylesheet" href="/css/hero-quote.css?v=1">
+<link rel="stylesheet" href="/css/hero-quote.css?v=carousel-1">
 <script>
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.documentElement.classList.add('tile-intro-pending');
@@ -95,6 +95,41 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 <span class="hero-title-primary">Concrete services</span>
 <em class="hero-title-craft">Residential &amp; Commercial</em>
 </h1>
+<section class="hero-project-carousel" aria-label="Concrete projects" aria-roledescription="carousel">
+<div class="hero-carousel-stage" id="hero-project-slides">
+<div class="hero-carousel-slide" role="group" aria-roledescription="slide" aria-label="Driveways, 1 of 4" data-project-slide>
+<a class="orbit-card orbit-one" href="/services/driveways.html" aria-label="Explore driveway services">
+<img src="/images/AdobeStock_63714628-Optimized.jpg" alt="Concrete driveway" width="280" height="250">
+<span>Driveways</span>
+</a>
+</div>
+<div class="hero-carousel-slide" role="group" aria-roledescription="slide" aria-label="Patios, 2 of 4" data-project-slide hidden>
+<a class="orbit-card orbit-two" href="/services/patios.html" aria-label="Explore patio services">
+<img src="/images/Screen-Shot-2020-11-27-at-1.24.23-PM.jpg" alt="Concrete patio beside a brick home" width="280" height="250">
+<span>Patios</span>
+</a>
+</div>
+<div class="hero-carousel-slide" role="group" aria-roledescription="slide" aria-label="Sidewalks, 3 of 4" data-project-slide hidden>
+<a class="orbit-card orbit-three" href="/services/sidewalks.html" aria-label="Explore sidewalk services">
+<img src="/images/AdobeStock_377241561-optimized-1.jpg" alt="Concrete walkway" width="280" height="250">
+<span>Sidewalks</span>
+</a>
+</div>
+<div class="hero-carousel-slide" role="group" aria-roledescription="slide" aria-label="Decorative concrete, 4 of 4" data-project-slide hidden>
+<a class="orbit-card orbit-four" href="/services/concrete-stamping.html" aria-label="Explore decorative concrete">
+<img src="/images/AdobeStock_75067836-Optimized.jpg" alt="Decorative concrete surface" width="280" height="250">
+<span>Decorative concrete</span>
+</a>
+</div>
+</div>
+<div class="hero-carousel-controls" hidden>
+<button type="button" data-carousel-prev aria-label="Previous concrete project" aria-controls="hero-project-slides">‹</button>
+<span class="hero-carousel-count" aria-hidden="true">01 / 04</span>
+<button type="button" data-carousel-next aria-label="Next concrete project" aria-controls="hero-project-slides">›</button>
+<button type="button" class="hero-carousel-toggle" data-carousel-toggle aria-label="Pause automatic project rotation">Pause</button>
+</div>
+<p class="hero-carousel-announcement" aria-live="polite" aria-atomic="true"></p>
+</section>
 <p class="hero-services">Concrete contracting services to build, repair, and restore driveways, patios &amp; pathways. Serving south of Atlanta, GA, and in surrounding cities.</p>
 <div class="actions">
 <a class="btn btn-outline" href="/gallery.html">Explore our work</a>
@@ -166,24 +201,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 <div class="w-form-done" role="status">Thank you! Your submission has been received.</div>
 <div class="w-form-fail" role="alert">Your message could not be sent. Please try again or call 770-946-1697.</div>
 </aside>
-<div class="hero-projects" role="group" aria-label="Explore our concrete work">
-<a class="orbit-card orbit-one" href="/services/driveways.html" aria-label="Explore driveway services">
-<img src="/images/AdobeStock_63714628-Optimized.jpg" alt="Concrete driveway" width="280" height="250">
-<span>Driveways</span>
-</a>
-<a class="orbit-card orbit-two" href="/services/patios.html" aria-label="Explore patio services">
-<img src="/images/Screen-Shot-2020-11-27-at-1.24.23-PM.jpg" alt="Concrete patio beside a brick home" width="280" height="250">
-<span>Patios</span>
-</a>
-<a class="orbit-card orbit-three" href="/services/sidewalks.html" aria-label="Explore sidewalk services">
-<img src="/images/AdobeStock_377241561-optimized-1.jpg" alt="Concrete walkway" width="280" height="250">
-<span>Sidewalks</span>
-</a>
-<a class="orbit-card orbit-four" href="/services/concrete-stamping.html" aria-label="Explore decorative concrete">
-<img src="/images/AdobeStock_75067836-Optimized.jpg" alt="Decorative concrete surface" width="280" height="250">
-<span>Decorative concrete</span>
-</a>
-</div>
+
 </div>
 </div>
 <div class="hero-strip" id="hero-highlights">
@@ -511,7 +529,8 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 </script>
 <script src="/js/hero-surface.js?v=slab-edges-1"></script>
 <script src="/js/concrete-perspective.js?v=photo-1"></script>
-<script src="/js/hero-tiles.js"></script>
+<script src="/js/hero-tiles.js?v=carousel-1"></script>
+<script src="/js/hero-carousel.js?v=1"></script>
 <script src="/js/contact-forms.js?v=local-preview-1">
 </script>
 </body>
