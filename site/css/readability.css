@@ -6,6 +6,7 @@ html { font-size: 100%; }
   --font-navigation: clamp(.9375rem, calc(.625rem + .25vw), 1.5rem);
 }
 body.modern { font-size: var(--font-reading); line-height: 1.7; }
+body.modern main :is(h2, h3, h4) { font-weight: 700; }
 body.modern :is(h1, h2, h3, h4, p, li, dd, dt, a, label, summary, small) { overflow-wrap: anywhere; }
 body.modern p:not(.review-quote),
 body.modern :is(.audience-panel li, .planning-grid dt, .planning-grid dd) {

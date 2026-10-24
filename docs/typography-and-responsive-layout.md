@@ -4,6 +4,8 @@ The redesign uses `site/css/readability.css` and `site/css/responsive.css`, load
 
 ## Reading sizes
 
+Main content section, service card, article, and form headings (h2, h3, and h4) use bold weight 700 in the shared readability stylesheet.
+
 The previous typography audit found visible text at 9–13px on every page, including form labels, footer links, fine print, card descriptions, navigation, and paragraphs.
 
 | Content | Normal desktop and phone | At a 5120px CSS viewport |
