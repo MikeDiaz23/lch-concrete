@@ -1,0 +1,22 @@
+/* A compact, scrollable Areas menu shared by every page. */
+body.modern .nav-drop > summary.is-current { color: var(--red); }
+body.modern .area-nav-panel {
+  width: min(32rem, calc(100vw - 3rem));
+  max-height: calc(100svh - var(--site-header-height, 6rem) - 1rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+body.modern .area-nav-overview {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: .4rem;
+  font-weight: 600;
+}
+.area-nav-cities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+body.modern .area-nav-panel a { min-width: 0; padding: .65em .75em; white-space: normal; overflow-wrap: anywhere; }
+@media (max-width: 1200px) {
+  body.modern .area-nav-panel { width: 100%; max-height: none; overflow: visible; padding: 0; }
+  .area-nav-cities { column-gap: .5rem; }
+}
+@media (max-width: 480px) {
+  .area-nav-cities { grid-template-columns: minmax(0, 1fr); }
+}

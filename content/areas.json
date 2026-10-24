@@ -1,0 +1,624 @@
+{
+  "center": "Hampton, Georgia",
+  "radius_miles": 40,
+  "radius_method": "Approximate geographic radius using Census representative place coordinates and great-circle distances. Not driving mileage or a guarantee for every address within municipal boundaries.",
+  "geography_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_place_national.zip",
+  "cities": [
+    {
+      "name": "Hampton",
+      "slug": "hampton",
+      "county": "Henry County",
+      "focus": "driveways",
+      "summary": "Our home base, with practical help for driveways, patios, and everyday property access.",
+      "intro": "LCH Concrete & Restoration is based in Hampton. We help homeowners, businesses, and property managers plan concrete construction and repairs with attention to how the space is used every day.",
+      "local_heading": "Concrete work close to home",
+      "local_copy": [
+        "Hampton is the center of our service area, with a downtown organized around Main Street and properties extending into the surrounding community. A driveway replacement near an established home can need a different approach from a new patio on a larger lot. Start with the way the property is used and the concrete that is already there.",
+        "Tell us whether the problem is limited to a damaged section or affects the entire surface. Photos of the entrance, garage, steps, and nearby yard help explain how the concrete connects to the rest of your property. During planning, we can discuss removal, access for equipment, drainage concerns, and the finish you want."
+      ],
+      "residential": "For a Hampton home, a useful driveway should support parking and a comfortable route to the front door. A patio should fit the way you relax outside. We can discuss replacement, extensions, connecting walkways, and repairs while keeping the transitions between existing and new surfaces in view.",
+      "commercial": "Local shops, offices, rental properties, and community facilities need concrete work planned around the people using them. Let us know about customer entrances, deliveries, tenant access, and any operating hours that affect the project. Public-property teams can also contact us to discuss scope and project requirements.",
+      "planning": [
+        {
+          "title": "Keep an access route",
+          "text": "Identify which entrance must remain usable while an old driveway or walkway is removed. Share any limits on street parking or equipment access."
+        },
+        {
+          "title": "Look beyond the crack",
+          "text": "Photograph any standing water, changes in height, or broken edges as well as the visible damage. These details help frame a repair or replacement discussion."
+        },
+        {
+          "title": "Connect old and new",
+          "text": "Show us where the proposed concrete meets your garage, porch, landscaping, or an existing path so those transitions can be considered together."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you help with a small concrete repair in Hampton?",
+          "answer": "Describe the damaged area and send its approximate dimensions. A localized repair and a full replacement solve different problems, so we first need to understand the surface, how it is used, and what is happening around it."
+        },
+        {
+          "question": "What should I include in my Hampton estimate request?",
+          "answer": "Include the project address, photos, approximate size, and whether you need new concrete, removal and replacement, or a repair. Mention access restrictions and the time frame you have in mind. We can then discuss the next step for your property."
+        }
+      ],
+      "source": "https://hamptonga.gov/DocumentCenter/View/2701/Res-21-03-Main-Street-Boundaries",
+      "latitude": 33.377704,
+      "longitude": -84.298974,
+      "geoid": "1336276",
+      "radius_miles": 0.0
+    },
+    {
+      "name": "Griffin",
+      "slug": "griffin",
+      "county": "Spalding County",
+      "focus": "driveways",
+      "summary": "Repair and replacement options for established properties and new outdoor improvements.",
+      "intro": "LCH helps Griffin homeowners and businesses improve driveways, patios, and walkways with concrete construction and restoration planned around the existing property.",
+      "local_heading": "Update the concrete without losing the character of the property",
+      "local_copy": [
+        "Downtown Griffin has an active Main Street program and an established commercial setting. For a property with existing walks, entrances, or older finishes, new concrete should be considered as part of the whole site. The appearance of the connection can matter just as much as the replacement surface itself.",
+        "When describing a Griffin project, include both the damaged area and its relationship to the building. A driveway, porch approach, and side path may have developed at different times. Looking at them together helps identify where a repair ends and where a more complete update may be useful."
+      ],
+      "residential": "For established homes, let us know about narrow access, existing garage approaches, and landscaping you want considered during planning. For a new patio or pathway, think about furniture, walking routes, and the transitions back to the house rather than only the overall square footage.",
+      "commercial": "For downtown shops and other business properties, access for customers and deliveries belongs in the estimate conversation. Share any restrictions on the work area and the times when the entrance is busiest. Public and community property teams can also ask about a defined concrete scope.",
+      "planning": [
+        {
+          "title": "Show adjoining materials",
+          "text": "Photograph brick, steps, older concrete, and other finishes where the proposed work will connect to the property."
+        },
+        {
+          "title": "Discuss equipment access",
+          "text": "Mention narrow drives, fences, close buildings, and any part of the yard or entrance that limits the route into the work area."
+        },
+        {
+          "title": "Separate repair goals",
+          "text": "Explain whether the priority is damaged concrete, a more useful layout, or a coordinated visual update. Those goals can lead to different scopes."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can new concrete exactly match an older Griffin driveway?",
+          "answer": "Age, weathering, finish, and the materials in the original concrete affect its appearance. An exact visual match should not be assumed. Bring photos of the existing surface so the transition and finish options can be discussed before work is scoped."
+        },
+        {
+          "question": "What if my Griffin property has limited access?",
+          "answer": "Describe the route from the street to the work area and share photos of gates, fences, or tight spaces. Access affects how removal, preparation, and placement can be organized. It is best to discuss those limits before settling on the project layout."
+        }
+      ],
+      "source": "https://www.cityofgriffin.com/government/departments/economic-development/downtown-griffin",
+      "latitude": 33.243188,
+      "longitude": -84.271861,
+      "geoid": "1335324",
+      "radius_miles": 9.4
+    },
+    {
+      "name": "McDonough",
+      "slug": "mcdonough",
+      "county": "Henry County",
+      "focus": "driveways",
+      "summary": "Driveway and walkway projects for established homes, growing neighborhoods, and business properties.",
+      "intro": "From a driveway that needs replacement to a more useful backyard patio, LCH helps McDonough property owners plan concrete work around their home, business, and daily routines.",
+      "local_heading": "Plan for the way your McDonough property works",
+      "local_copy": [
+        "McDonough Square anchors the city’s historic central business district. Projects around an established streetscape can involve different access and finish considerations from work at a newer residential property. Share the exact location and what already surrounds the proposed concrete so the scope reflects your setting.",
+        "A wider parking area, a repaired entrance, and a new patio each have different priorities. Explain how vehicles and people move across the space today, where water collects, and whether removal is part of the job. That information is more useful than choosing a surface size without looking at the surrounding property."
+      ],
+      "residential": "For residential projects, consider the complete route from the street to the garage and front entrance. Driveway extensions should make parking easier without creating an awkward edge or transition. Patios and paths can be planned together so a new outdoor area feels connected to the house.",
+      "commercial": "For a storefront, office, or managed property, tell us which routes customers and staff use throughout the day. Projects near the Square may need particular attention to access and the surrounding streetscape. We can discuss work areas, pedestrian routes, and scheduling needs before a scope is finalized.",
+      "planning": [
+        {
+          "title": "Describe parking needs",
+          "text": "Tell us how many vehicles use the driveway, where they turn, and whether garage access needs to remain available during the project."
+        },
+        {
+          "title": "Share existing finishes",
+          "text": "Photos of adjacent walkways, steps, and masonry help guide a conversation about the appearance of new concrete beside older materials."
+        },
+        {
+          "title": "Identify property constraints",
+          "text": "Mention gates, close neighboring buildings, landscaping, or neighborhood review requirements that could influence the layout and work area."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can a McDonough driveway be extended instead of fully replaced?",
+          "answer": "An extension may be worth discussing when the existing driveway is serviceable and the goal is additional parking or maneuvering room. Its connection to the old concrete, drainage, and available space still need to be considered before deciding on a layout."
+        },
+        {
+          "question": "Can you plan work around a McDonough business entrance?",
+          "answer": "Let us know about business hours, delivery times, and the entrance customers need to use. We can discuss how the work might be organized and what access arrangements the property will need. The final approach depends on the site and project scope."
+        }
+      ],
+      "source": "https://www.mcdonoughga.org/181/Downtown-Development-Authority",
+      "latitude": 33.439611,
+      "longitude": -84.148899,
+      "geoid": "1348624",
+      "radius_miles": 9.7
+    },
+    {
+      "name": "Jonesboro",
+      "slug": "jonesboro",
+      "county": "Clayton County",
+      "focus": "sidewalks",
+      "summary": "Concrete repairs and improvements with attention to entrances, boundaries, and daily access.",
+      "intro": "LCH provides concrete construction and restoration for Jonesboro homes and business properties, including driveway replacement, patios, and walkways that connect the spaces you use.",
+      "local_heading": "Work with the existing layout of your Jonesboro property",
+      "local_copy": [
+        "Jonesboro has a downtown development program focused on its central business area. For a project in an established setting, the available work area and its connection to existing entrances deserve attention early. A small repair beside a storefront can involve different access needs from a residential driveway replacement.",
+        "Photos from the street, the entrance, and the proposed work area help explain those relationships. Tell us about changes in level, existing paths, and whether the concrete stops at a property boundary or meets a public surface. A clear starting point helps keep the estimate focused on the work you actually need."
+      ],
+      "residential": "Homeowners can request help with a damaged driveway, an improved walk to the door, or a new patio. Describe how the surface is used today and what you want to change. Include gates, neighboring property edges, or other features that affect the available space.",
+      "commercial": "Shops, offices, rental properties, and community facilities should identify the entrances that need to remain usable. We can discuss a concrete scope with the people responsible for the property, including access arrangements and the information needed before a schedule can be considered.",
+      "planning": [
+        {
+          "title": "Identify the boundary",
+          "text": "Show where private concrete meets a public sidewalk, curb, or neighboring property. Avoid treating the whole visible surface as one ownership area."
+        },
+        {
+          "title": "Plan the route to the door",
+          "text": "Describe the path visitors or residents use from parking to the entrance, including any steps and changes in height."
+        },
+        {
+          "title": "Include nearby damage",
+          "text": "Photograph adjacent cracks, broken edges, or uneven sections so a limited repair can be considered in the context of the complete surface."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you replace a Jonesboro front walkway?",
+          "answer": "Walkway replacement is a project we can discuss. Include photos of the full route, its connection to the entrance, and the approximate size. If any part is public property, identify it so the correct project boundary can be considered."
+        },
+        {
+          "question": "Can you work on a small business property in Jonesboro?",
+          "answer": "Business owners and property managers can request a concrete estimate. Share the work area, the way customers use the entrance, and any scheduling or access restrictions. Those details help define a practical scope for the property."
+        }
+      ],
+      "source": "https://www.jonesboroga.com/m/JonesboroDowntownDevelopmentAuthority.aspx",
+      "latitude": 33.520799,
+      "longitude": -84.354701,
+      "geoid": "1342604",
+      "radius_miles": 10.4
+    },
+    {
+      "name": "Stockbridge",
+      "slug": "stockbridge",
+      "county": "Henry County",
+      "focus": "sidewalks",
+      "summary": "Concrete improvements for home access, customer-facing spaces, and managed properties.",
+      "intro": "LCH provides concrete construction and restoration for Stockbridge homes and business properties. Bring us the access problem, damaged surface, or outdoor project you want to improve, and we can help define a practical scope.",
+      "local_heading": "Better connections across your Stockbridge property",
+      "local_copy": [
+        "Stockbridge is in northern Henry County, with residential and commercial properties that serve different daily needs. For concrete work, the useful starting point is how people reach the building: the driveway, the walk to the door, and the transitions between parking and the entrance.",
+        "A damaged walkway should be viewed in context with the steps and surfaces around it. Similarly, a new patio needs more than an available patch of yard. Explain who uses the space, how often it is used, and any changes in level or drainage that concern you."
+      ],
+      "residential": "For a home, we can discuss a replacement driveway, a patio for everyday use, or a path that better connects entrances and outdoor areas. If the project is a repair, include photos from several angles so the discussion covers both the damaged spot and the surrounding concrete.",
+      "commercial": "Business owners and property managers should identify the routes used by visitors, staff, and deliveries. Share any service interruptions that would be difficult to accommodate. A defined work area and a conversation about access are useful early steps for entrance, walkway, and other concrete improvements.",
+      "planning": [
+        {
+          "title": "Follow the walking route",
+          "text": "Show the full connection from parking to the building, including changes in level and any narrow or damaged sections."
+        },
+        {
+          "title": "Explain daily use",
+          "text": "Mention pedestrian traffic, parking patterns, and any equipment or vehicles that regularly use the proposed work area."
+        },
+        {
+          "title": "Set clear project limits",
+          "text": "Identify whether you want one section improved or a broader update that includes connected paths, steps, or outdoor spaces."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you repair a Stockbridge walkway without replacing everything?",
+          "answer": "The condition of the surrounding concrete matters as much as the visible damage. Send photos that show the complete path and its connections. We can discuss whether a limited scope makes sense or whether a larger replacement should be considered."
+        },
+        {
+          "question": "Do you work with Stockbridge property managers?",
+          "answer": "Property managers can request estimates for concrete repairs and improvements. Include the address, the surfaces involved, and the access needs of residents or tenants. Share any approval process or scheduling requirements that need to be considered."
+        }
+      ],
+      "source": "https://stockbridgega.org/ed",
+      "latitude": 33.529391,
+      "longitude": -84.233058,
+      "geoid": "1373704",
+      "radius_miles": 11.1
+    },
+    {
+      "name": "Fayetteville",
+      "slug": "fayetteville",
+      "county": "Fayette County",
+      "focus": "patios",
+      "summary": "Patios, driveways, and paths planned around how you use your home or business.",
+      "intro": "LCH offers concrete construction and restoration for Fayetteville properties, from a more welcoming driveway to a patio that gives your outdoor space a clearer purpose.",
+      "local_heading": "Concrete that fits Fayetteville’s different property settings",
+      "local_copy": [
+        "Fayetteville’s downtown includes City Center Park, while the west side includes the area around Trilith. Those different settings are a reminder that a city name alone does not describe a project. The property’s layout, existing finishes, and daily use should guide the concrete scope.",
+        "For an outdoor improvement, start with what you want the space to do. Dining, seating, circulation, and parking all need room, but not necessarily the same surface layout. Share how the new area should connect to doors, lawns, existing walks, and other parts of the property."
+      ],
+      "residential": "A residential patio can be shaped around the furniture and activities you want to accommodate. Driveway and walkway projects should also account for the route to the front door and garage. If neighborhood approval is part of your process, raise it early so the proposed layout can be discussed with that in mind.",
+      "commercial": "For offices, shops, and managed properties, concrete improvements should support a clear route for visitors. Let us know about entrances, parking, and any areas that need to remain usable. We can discuss the project boundaries and how the proposed work connects to the surrounding property.",
+      "planning": [
+        {
+          "title": "Plan the usable space",
+          "text": "Approximate the area needed for seating, dining, and walking around furniture before choosing the outside dimensions of a patio."
+        },
+        {
+          "title": "Review visual connections",
+          "text": "Share photos of the home, adjoining walks, and outdoor finishes so the concrete’s role in the overall setting is clear."
+        },
+        {
+          "title": "Raise approval needs early",
+          "text": "If your property has neighborhood or other review requirements, include them with the initial request rather than after the layout is chosen."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you help plan a Fayetteville patio layout?",
+          "answer": "Tell us how you want to use the space and where it should connect to the house. Approximate dimensions, photos, furniture plans, and access information help turn a general idea into a more useful estimate conversation."
+        },
+        {
+          "question": "Is decorative concrete an option for a Fayetteville outdoor area?",
+          "answer": "Decorative and stamped concrete may be options depending on the project. The finish should be considered alongside the layout, maintenance expectations, and adjoining materials. You can review the decorative concrete service page and ask about options for your property."
+        }
+      ],
+      "source": "https://www.fayetteville-ga.gov/DocumentCenter/View/3906/Hello-Neighbor-Update-2025-09-29",
+      "latitude": 33.449099,
+      "longitude": -84.472824,
+      "geoid": "1328968",
+      "radius_miles": 11.2
+    },
+    {
+      "name": "Locust Grove",
+      "slug": "locust-grove",
+      "county": "Henry County",
+      "focus": "patios",
+      "summary": "Driveways, outdoor spaces, and business access improvements southeast of Hampton.",
+      "intro": "LCH helps Locust Grove homeowners and businesses plan concrete projects, from repairs and driveway replacement to patios and paths that make outdoor areas easier to use.",
+      "local_heading": "Plan beyond the footprint of the new surface",
+      "local_copy": [
+        "Locust Grove’s historic downtown follows Highway 42, while the city also has a commercial area around the outlets near I-75. For a concrete project, a downtown property and a site with more open access can call for different planning conversations. The exact address and layout are more useful than a city-wide assumption.",
+        "Think about how the proposed concrete will meet the rest of the site. A driveway extension should make turning and parking more useful. A patio should connect comfortably to the house and yard. A walkway should follow the route people actually need rather than ending at an inconvenient point."
+      ],
+      "residential": "For a home, share the reason for the project as well as its approximate size. Additional parking, a replacement for damaged concrete, and a new outdoor seating area are different goals. We can discuss the layout and the existing surfaces that need to be considered alongside it.",
+      "commercial": "For a shop or other business property, identify delivery routes, customer parking, and the entrance that must remain available. Property teams planning a repair should include the surrounding concrete and any changes in use that may affect what the surface needs to do.",
+      "planning": [
+        {
+          "title": "Explain maneuvering space",
+          "text": "If the project involves parking or a driveway, show where vehicles enter, turn, and stop so the layout can be discussed as a complete route."
+        },
+        {
+          "title": "Identify the work entrance",
+          "text": "Include photos of the route equipment would use and mention fences, gates, landscaping, or other limits on access."
+        },
+        {
+          "title": "Show the existing edges",
+          "text": "Photograph where new concrete would meet a garage, walk, yard, or another slab. Connections help define the actual scope."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you discuss a driveway extension in Locust Grove?",
+          "answer": "Yes. Share your parking goal, the existing driveway dimensions, and photos showing the entrance and available space. An extension should be considered with its connections, drainage, and turning area before choosing the final layout."
+        },
+        {
+          "question": "Do you handle concrete projects for Locust Grove businesses?",
+          "answer": "Businesses and property managers can request an estimate for a defined concrete project. Include the address, surfaces involved, and operating or delivery times that may affect access. We can discuss the scope and the next planning step."
+        }
+      ],
+      "source": "https://www.locustgrove-ga.gov/living-here/parks",
+      "latitude": 33.338842,
+      "longitude": -84.101558,
+      "geoid": "1347140",
+      "radius_miles": 11.7
+    },
+    {
+      "name": "Riverdale",
+      "slug": "riverdale",
+      "county": "Clayton County",
+      "focus": "driveways",
+      "summary": "Repair and replacement projects shaped around parking, entrances, and active properties.",
+      "intro": "LCH provides concrete construction and restoration for Riverdale properties. We help define driveway, patio, and walkway projects around the way residents, visitors, and customers use the space.",
+      "local_heading": "Make everyday access part of the Riverdale project",
+      "local_copy": [
+        "Riverdale Town Center sits near Church Street and the Highway 85 corridor. For nearby business properties and residential projects elsewhere in the city, access is an important starting point: where people park, which entrance they use, and how they reach it.",
+        "When a damaged surface is the reason for the call, include photos of the surrounding area. A crack, a change in height, and water collecting beside the concrete can point to different questions. A useful estimate conversation starts with those observations rather than only a request to cover the visible damage."
+      ],
+      "residential": "For a home or rental property, identify the parking and entrance access needed during the project. We can discuss driveway replacement, a new patio, and connecting walks. Let us know whether the priority is a damaged area, a more useful layout, or both.",
+      "commercial": "Commercial and managed properties should describe the daily use of the work area, including tenant or customer traffic. Share opening hours and any route that cannot simply be closed. A clear understanding of those needs helps shape the discussion about project limits and scheduling.",
+      "planning": [
+        {
+          "title": "Discuss parking alternatives",
+          "text": "Explain where residents, staff, or visitors could park while the work area is unavailable and which routes need to remain open."
+        },
+        {
+          "title": "Document water concerns",
+          "text": "Photos after rain can help explain where water collects. Include the direction of nearby surfaces and the connection to the building."
+        },
+        {
+          "title": "Include tenant needs",
+          "text": "For an occupied rental or managed property, identify the people using the area and any access arrangements that need coordination."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you help with a Riverdale rental-property driveway?",
+          "answer": "Property owners and managers can request an estimate. Share the address, photos, approximate dimensions, and tenant access needs. We can discuss the project scope and what coordination would be needed before a work schedule is considered."
+        },
+        {
+          "question": "Should I request repair or replacement for damaged concrete?",
+          "answer": "Describe the damage and include photos of the whole surface. A small visible defect does not always describe the full condition. We can discuss the surrounding concrete, intended use, and whether a limited repair or broader replacement should be considered."
+        }
+      ],
+      "source": "https://www.riverdalega.gov/505/Event-Information",
+      "latitude": 33.563869,
+      "longitude": -84.410959,
+      "geoid": "1365464",
+      "radius_miles": 14.4
+    },
+    {
+      "name": "Peachtree City",
+      "slug": "peachtree-city",
+      "county": "Fayette County",
+      "focus": "sidewalks",
+      "summary": "Thoughtful driveways and private-property paths in a community built around connections.",
+      "intro": "LCH helps Peachtree City property owners plan concrete driveways, patios, and walkways with close attention to entrances, outdoor use, and the surfaces the new work will meet.",
+      "local_heading": "Think about the connections as well as the concrete",
+      "local_copy": [
+        "Peachtree City’s shared-use path network connects neighborhoods, shops, schools, and other destinations. On private property, that emphasis on connection is useful when planning a driveway, patio, or walk. Look at the full route between the building, parking, and outdoor areas before choosing where new concrete should go.",
+        "Private-property improvements and work affecting a public path are different scopes. If your idea reaches a shared-use path or another public area, identify that connection in the request so ownership and any required review can be discussed before a layout is finalized."
+      ],
+      "residential": "For homes, consider how a driveway, private walkway, and patio work together. A new surface can improve everyday movement without expanding every part of the yard. Share the intended use, any cart-related access needs on your own property, and the boundaries of the proposed work.",
+      "commercial": "For business and community properties, describe how visitors reach the entrance from parking and other routes. A clear project boundary is especially useful where private surfaces meet shared spaces. We can discuss concrete improvements with your property team and identify the information needed to define the scope.",
+      "planning": [
+        {
+          "title": "Mark public and private edges",
+          "text": "Show where your property ends and where a shared-use path or other public surface begins. Include any available site information."
+        },
+        {
+          "title": "Describe intended traffic",
+          "text": "Tell us whether the private surface is for walking, parking, or another use. The intended use belongs in the planning conversation."
+        },
+        {
+          "title": "Keep transitions in view",
+          "text": "Photograph the connection to the driveway, entrance, and existing paths rather than only the area where you want new concrete."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you add a private walkway at a Peachtree City home?",
+          "answer": "We can discuss private-property walkway projects. Share the proposed route, approximate dimensions, and the surfaces it needs to meet. If the route connects to the public path network, identify that connection and any approval information you already have."
+        },
+        {
+          "question": "Can my concrete project connect to a shared-use path?",
+          "answer": "Do not assume a connection can be added simply because a path is nearby. Public paths and private-property work have different ownership and review considerations. Share the exact location so those boundaries can be identified before a scope is agreed."
+        }
+      ],
+      "source": "https://www.peachtree-city.org/1187/Shared-Use-Path-System",
+      "latitude": 33.391887,
+      "longitude": -84.570656,
+      "geoid": "1359724",
+      "radius_miles": 15.7
+    },
+    {
+      "name": "Forest Park",
+      "slug": "forest-park",
+      "county": "Clayton County",
+      "focus": "driveways",
+      "summary": "Concrete planning for homes, customer routes, and business properties with active access needs.",
+      "intro": "LCH helps Forest Park property owners plan concrete construction and restoration with attention to the vehicles, people, and daily activity the finished surface needs to support.",
+      "local_heading": "Define the use before defining the concrete",
+      "local_copy": [
+        "Forest Park is close to the airport and has connections to several major transport routes. The city’s planning documents also identify its industrial and commercial setting. For a concrete project, that makes it especially useful to describe the actual property use rather than assume every driveway or access area has the same demands.",
+        "Tell us about the vehicles and equipment that use the surface, how people reach the entrance, and whether the project is a repair or a new layout. If plans or specifications already exist, share them with the inquiry so the intended scope can be understood before an estimate discussion."
+      ],
+      "residential": "For residential work, a driveway should be planned around the entrance, parking, and route to the house. We can also discuss patios and private walkways. Share photos that show the adjoining yard and building so the new or repaired concrete is considered in context.",
+      "commercial": "For commercial or managed sites, identify delivery activity, pedestrian routes, and the hours when access is most important. Areas used by heavier vehicles or equipment need their requirements discussed explicitly. We can review the proposed work with the responsible property team and clarify the scope being requested.",
+      "planning": [
+        {
+          "title": "Describe vehicle use",
+          "text": "List the kinds of vehicles or equipment expected on the surface. A residential parking area and a service or delivery area should not be treated as identical."
+        },
+        {
+          "title": "Share existing specifications",
+          "text": "If the owner or project team has drawings or requirements, include them at the outset so the estimate discussion addresses the intended work."
+        },
+        {
+          "title": "Separate people and deliveries",
+          "text": "Explain how pedestrians reach the building and how delivery traffic moves through the site when planning the work area."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What information helps with a Forest Park commercial estimate?",
+          "answer": "Include the site address, project dimensions, photographs, intended vehicle use, and any available drawings or specifications. Mention operating hours and access needs. These details help establish what work is being requested before a quote is prepared."
+        },
+        {
+          "question": "Can I request residential concrete work in Forest Park?",
+          "answer": "Yes. Homeowners can ask about driveway repairs or replacement, patios, and walkways. Share the address, the purpose of the project, and photos showing the complete area so the discussion can focus on the property’s actual needs."
+        }
+      ],
+      "source": "https://www.forestparkga.gov/sites/default/files/fileattachments/planning_building_and_zoning/page/3321/forest_park_2023_comprehensive_plan-final.pdf",
+      "latitude": 33.620543,
+      "longitude": -84.358181,
+      "geoid": "1330536",
+      "radius_miles": 17.1
+    },
+    {
+      "name": "Fairburn",
+      "slug": "fairburn",
+      "county": "Fulton County",
+      "focus": "decorative",
+      "summary": "Concrete updates that consider established settings, useful outdoor space, and business access.",
+      "intro": "LCH helps Fairburn property owners plan concrete construction and restoration, including driveways, patios, walkways, and decorative concrete options for the right project.",
+      "local_heading": "Fit the concrete to the Fairburn setting",
+      "local_copy": [
+        "Fairburn’s Main Street program focuses on its downtown business and retail district, with an emphasis on pedestrian-friendly connections. For a property in that setting, a concrete improvement should be considered with the entrance, neighboring finishes, and the route people use to reach the building.",
+        "Elsewhere in the city, a residential patio or driveway may have a different purpose and more room to work with. Share the actual site and the reason for the improvement so the conversation starts with your property’s needs rather than a generic city-wide layout."
+      ],
+      "residential": "For a home, we can discuss replacement concrete, an improved outdoor area, and decorative finishes. The finish should support the use of the space and relate to the materials around it. Include photos of the house, existing paving, and where the proposed concrete would connect.",
+      "commercial": "For a downtown business or another commercial property, identify the customer route and any restrictions on access. If a review process applies to the property or proposed exterior work, bring that information into the conversation early. Public and community project teams can also discuss a defined scope.",
+      "planning": [
+        {
+          "title": "Consider the surroundings",
+          "text": "Photograph adjoining brick, storefronts, landscaping, and paving to help explain the visual setting for the proposed work."
+        },
+        {
+          "title": "State the review needs",
+          "text": "If the property has historic, neighborhood, or other review requirements, share what you know before selecting a layout or finish."
+        },
+        {
+          "title": "Plan for customers",
+          "text": "Identify the entrance customers use and any times when closing or limiting that route would be especially difficult."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you discuss decorative concrete for a Fairburn patio?",
+          "answer": "Decorative and stamped concrete are options to explore alongside the patio’s layout, use, and surrounding finishes. Share examples of the appearance you prefer and photos of the property so the discussion stays connected to the actual setting."
+        },
+        {
+          "question": "Can you work with a Fairburn storefront’s access needs?",
+          "answer": "Tell us about business hours, customer routes, and the space available for work. We can discuss the intended concrete improvements and the access arrangements that would need consideration before the scope and schedule are finalized."
+        }
+      ],
+      "source": "https://www.fairburn.com/209/Main-Street-Program-Downtown-Development",
+      "latitude": 33.547753,
+      "longitude": -84.587277,
+      "geoid": "1328380",
+      "radius_miles": 20.4
+    },
+    {
+      "name": "Union City",
+      "slug": "union-city",
+      "county": "Fulton County",
+      "focus": "driveways",
+      "summary": "Concrete improvements with a clear plan for access, drainage, and property use.",
+      "intro": "LCH offers concrete construction and restoration for Union City homes, businesses, and managed properties, including driveway, patio, and walkway projects within our south Atlanta service area.",
+      "local_heading": "Look at the whole Union City work area",
+      "local_copy": [
+        "When planning a concrete project in Union City, include the surfaces and routes around the proposed work as well as the slab itself. A new driveway or patio changes how an area is used, while a repair needs to be considered alongside the condition of the existing concrete.",
+        "Water movement deserves a place in that first conversation. Show where runoff travels today, whether water gathers at an entrance, and how the proposed surface meets the surrounding ground. The city maintains a stormwater program, and property-specific drainage or review questions should be identified before a layout is finalized."
+      ],
+      "residential": "Homeowners can request a driveway update, a useful backyard patio, or a connecting private walkway. Explain the goal and provide photos of the complete setting. If a neighborhood review process applies to your property, include that information with your initial request.",
+      "commercial": "For a business or managed property, identify the surfaces used by visitors, staff, and service vehicles. Tell us about delivery times, resident access, and any area that needs to stay available. We can discuss the project boundaries and the information needed for a practical scope.",
+      "planning": [
+        {
+          "title": "Map the water path",
+          "text": "Include the places where water enters and leaves the proposed work area. Photographs after rain can make the concern easier to understand."
+        },
+        {
+          "title": "Define the change in use",
+          "text": "Explain whether the surface will continue to serve the same purpose or needs to accommodate a different parking or walking pattern."
+        },
+        {
+          "title": "Identify project reviewers",
+          "text": "Tell us who owns or manages the property and whether another party needs to review the proposed work before it proceeds."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you discuss drainage with a Union City concrete project?",
+          "answer": "Share the concern with your request, including photos of standing water and nearby surfaces. Drainage is part of understanding the site. Some issues may need additional investigation or design before a concrete scope can be settled."
+        },
+        {
+          "question": "What if a Union City project needs property-manager approval?",
+          "answer": "Include the approval process and the appropriate project contact in your request. Photos, dimensions, and a clear description of the desired work help the owner or manager evaluate the scope before scheduling decisions are made."
+        }
+      ],
+      "source": "https://www.unioncityga.org/home/showpublisheddocument/1836/636670508774130000",
+      "latitude": 33.593837,
+      "longitude": -84.56263,
+      "geoid": "1378324",
+      "radius_miles": 21.3
+    },
+    {
+      "name": "South Fulton",
+      "slug": "south-fulton",
+      "county": "Fulton County",
+      "focus": "patios",
+      "summary": "Property-specific driveway, patio, and walkway planning across a varied southside community.",
+      "intro": "LCH provides concrete construction and restoration for South Fulton properties within our Hampton-centered service area. Share your address and project goals so we can discuss the work in the context of your location.",
+      "local_heading": "Start with the address, not just the city name",
+      "local_copy": [
+        "South Fulton includes distinct development areas such as Old National, Sandtown Crossing, Red Oak, and Campbellton. A project in one part of the city may have a very different setting from another. The address, access route, and existing surfaces are important details for a useful concrete conversation.",
+        "Describe whether you need a repair, replacement, or a new outdoor area. Include the connection to the house or business and any concern about water, parking, or changes in height. Those details help define the work without assuming one solution fits every part of a large city."
+      ],
+      "residential": "For a home, think about the driveway, private walkways, and outdoor seating as connected parts of the property. A new patio may improve daily use without expanding every surface. A driveway replacement may need to address existing connections and access as well as damaged concrete.",
+      "commercial": "For commercial, managed, or community properties, share the intended use and the people who rely on the area. Identify operating hours, tenant access, and any existing project requirements. We can discuss a defined concrete scope with the team responsible for the property.",
+      "planning": [
+        {
+          "title": "Include the full address",
+          "text": "South Fulton covers a broad area. The exact project location helps us confirm the service-area fit and understand how the work area is reached."
+        },
+        {
+          "title": "Describe nearby activity",
+          "text": "Mention occupied entrances, delivery activity, and shared access so the project discussion accounts for the people using the property."
+        },
+        {
+          "title": "Show the complete connection",
+          "text": "Include photographs from the proposed concrete to the building, driveway, and surrounding ground rather than close-ups alone."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Do you cover every address in South Fulton?",
+          "answer": "Send the full project address with your request. Our service area is centered on Hampton, and South Fulton is geographically broad. We can confirm the location and discuss the proposed work before you plan around an estimate visit."
+        },
+        {
+          "question": "Can a South Fulton property manager request an estimate?",
+          "answer": "Yes. Include the work area, approximate dimensions, photographs, and the access needs of tenants or visitors. If your team has drawings, specifications, or an approval process, share those details with the inquiry."
+        }
+      ],
+      "source": "https://www.cityofsouthfultonga.gov/3140/Development-Nodes",
+      "latitude": 33.63572,
+      "longitude": -84.583417,
+      "geoid": "1372122",
+      "radius_miles": 24.2
+    },
+    {
+      "name": "Newnan",
+      "slug": "newnan",
+      "county": "Coweta County",
+      "focus": "sidewalks",
+      "summary": "Concrete planning for established homes, updated entrances, and more useful outdoor areas.",
+      "intro": "LCH helps Newnan property owners discuss concrete repairs, driveway replacement, patios, and walkways within our Hampton-centered service area. Start with the address, photographs, and the improvement you want to make.",
+      "local_heading": "Connect new work carefully to an established Newnan property",
+      "local_copy": [
+        "Newnan’s historic districts and downtown include a range of established homes and commercial buildings. When concrete is added or replaced beside an existing property, its connection to the building and surrounding materials deserves attention. A useful scope considers the transition, not only the new surface.",
+        "If your property has a review process for exterior work, identify it early. For any Newnan project, show us the route from the street to the work area and where the proposed concrete will meet entrances, steps, parking, or landscaping. Those details help make the estimate conversation specific to the site."
+      ],
+      "residential": "Homeowners can ask about repairs, a replacement driveway, or a new patio and private path. Consider the way the household uses the space and the appearance of adjoining materials. Matching older concrete exactly should not be assumed, so discuss the desired transition before choosing a finish.",
+      "commercial": "For a business or managed property, explain how people reach the entrance and when the area is busiest. We can discuss the concrete scope with the owner or project team, including access needs, existing finishes, and any requirements that need to be addressed before scheduling.",
+      "planning": [
+        {
+          "title": "Review the property setting",
+          "text": "Include photographs of the building and adjoining materials, especially where a new surface will meet older concrete or masonry."
+        },
+        {
+          "title": "Mention exterior reviews",
+          "text": "If historic-district, neighborhood, or owner review is part of the process, share that information at the start of the discussion."
+        },
+        {
+          "title": "Confirm the project location",
+          "text": "Provide the full address and access details. The service-area radius is geographic, so actual travel routes vary by property."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can you discuss concrete work at an established Newnan home?",
+          "answer": "Yes. Share photos showing the work area and its connection to the house. Mention access limits, adjoining materials, and any review process for exterior changes. We can then discuss the proposed repair, replacement, or new concrete scope."
+        },
+        {
+          "question": "Is Newnan inside your Hampton-centered service area?",
+          "answer": "Newnan is included among our selected service communities within the approximate 40-mile geographic radius. Send your exact address and project details so we can confirm the location and discuss the next step. Driving distance varies by route."
+        }
+      ],
+      "source": "https://www.newnanga.gov/188/Historic-Districts",
+      "latitude": 33.375833,
+      "longitude": -84.777324,
+      "geoid": "1355020",
+      "radius_miles": 27.6
+    }
+  ]
+}

@@ -4,7 +4,7 @@ Branch: `redesign/modern-site`. The original Webflow migration remains on `main`
 
 The current direction draws on https://libraries.dev/: a charcoal background, compact Inter typography, a split hero with a quote panel, rounded frames, subtle borders, and restrained hover effects. LCH's red logo icon remains consistent in both themes, with white lettering on dark surfaces and dark lettering on light surfaces. The homepage pairs its service-focused introduction and a rotating linked project-photo card with a quote request form. Existing project photos lead the homepage and gallery. Business name, logo, contact details, operations manager, service areas, service descriptions, customer quotes, analytics ID, routes, gallery images, and inquiry fields remain available.
 
-All 13 pages share the new header, navigation, footer, typography, and spacing. The homepage is rebuilt around services, local experience, completed projects, customer quotes, and the quote request. Service and community pages retain their original descriptive content in readable article layouts. The gallery retains its 26 exported lightboxes and runtime. The new navigation uses keyboard-accessible native dropdowns and a mobile menu with Escape dismissal. Reduced-motion settings disable entrance effects.
+All 28 pages share the new header, navigation, footer, typography, and spacing. The homepage is rebuilt around services, local experience, completed projects, customer quotes, and the quote request. Service and community pages retain their original descriptive content in readable article layouts. The gallery retains its 26 exported lightboxes and runtime. The new navigation uses keyboard-accessible native dropdowns and a mobile menu with Escape dismissal. Reduced-motion settings disable entrance effects.
 
 Edit page HTML directly. Base layout styles are in `site/css/modern.css`; the current visual direction is in `site/css/studio.css`, shared reading sizes and fluid desktop layouts in `site/css/readability.css` and `site/css/responsive.css` (loaded last), navigation behavior in `site/js/modern.js`, and form transport in `site/js/contact-forms.js`. The original exported stylesheet is retained for comparison but is no longer loaded by the redesigned pages.
 
@@ -22,7 +22,7 @@ Every header includes a sun/moon switch with a keyboard-accessible “Light mode
 
 ## Validation
 
-- Python site validation passes for all 13 pages, local assets, responsive references, lightbox image data, and all 11 inquiry forms.
+- Python site validation passes for all 28 pages, local assets, responsive references, lightbox image data, and all 25 inquiry forms.
 - Browser layout checks pass at 390px, 768px, and 1440px for the homepage, contact, gallery, patio service, and community pages, with no document overflow or broken eager-loaded images.
 - Browser interaction checks pass for mobile menu toggle, Escape dismissal, outside-click dropdown dismissal, gallery opening and Escape closing, and the inquiry form's missing-CAPTCHA error.
 - Every page has one main heading, unique IDs, and valid label targets.
@@ -82,3 +82,7 @@ Rotation uses a six-second timeout and pauses on pointer hover, keyboard focus, 
 ## Balanced desktop hero columns
 
 Above 950px, the introduction and quote panel use equal-width columns with matching top and bottom edges. The upright project card fills the left column, and its controls align with the headline and supporting copy. Desktop field heights and labels are larger, and the message area grows with the panel rather than leaving unused space. The left actions follow the carousel with a consistent 20px desktop gap instead of being pushed to the bottom of the column. Tablet and phone widths retain the stacked layout and compact field sizing. Rules remain scoped to the homepage in `site/css/hero-quote.css`.
+
+## Local service guides
+
+The Areas menu links to a directory and 14 city guides within the Hampton-centered geographic radius. City content, build instructions, geographic verification, source links, sticky form behavior, and validation are documented in docs/service-areas.md.

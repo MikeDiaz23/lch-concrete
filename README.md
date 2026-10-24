@@ -46,3 +46,7 @@ An optional Netlify configuration is included because it offers a replacement fo
 For Namecheap web hosting or another provider, replace the Netlify form adapter with that host's secure backend and configure extensionless routes and the custom 404 page. Uploading these files to basic static hosting alone does not provide contact form delivery.
 
 Official references: [Netlify form setup](https://docs.netlify.com/manage/forms/setup/) and [CAPTCHA setup](https://docs.netlify.com/manage/forms/spam-filters/).
+
+## Local service-area pages
+
+The Areas directory is available at /areas/ in the local preview. Fourteen city guides use original content from content/areas.json. Run python3 scripts/build_area_pages.py after editing that data, then run the normal site check. See docs/service-areas.md for routes, verified geography, form behavior, and maintenance details.

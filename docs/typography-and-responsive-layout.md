@@ -1,6 +1,6 @@
 # Typography and wide-screen layout
 
-The redesign uses `site/css/readability.css` and `site/css/responsive.css`, loaded last on all 13 pages. Base font sizes in modern.css, studio.css, theme.css, and hero-quote.css use rem units so browser font preferences can enlarge them. The exported gallery runtime and its component stylesheet remain intact.
+The redesign uses `site/css/readability.css` and `site/css/responsive.css`, loaded on all 28 pages. Base font sizes in modern.css, studio.css, theme.css, and hero-quote.css use rem units so browser font preferences can enlarge them. The exported gallery runtime and its component stylesheet remain intact.
 
 ## Reading sizes
 
@@ -31,7 +31,7 @@ The previous studio layout capped the content width at 1080px. The shared conten
 
 At 1800px and wider, headings, photos, section spacing, and card titles scale progressively. Services and galleries use four columns. The hero keeps equal content and form columns, with three form columns at 3000px and wider. The article and lower inquiry sections retain separate width caps to keep long text and forms comfortable to use. The hero heading uses its full column instead of retaining the earlier 640px cap.
 
-The mobile navigation breakpoint is 1000px, allowing larger links to fit cleanly before the full menu opens. The hero measures the actual header height to maintain the opening viewport strip placement as header sizes change.
+The mobile navigation breakpoint is 1200px, allowing larger links to fit cleanly before the full menu opens. The hero measures the actual header height to maintain the opening viewport strip placement as header sizes change.
 
 A high-resolution display can report a smaller CSS viewport because of operating system scaling. Both 2560px and 5120px widths were tested rather than inferring layout from the display's physical resolution alone.
 

@@ -4,13 +4,15 @@
   var nav = document.querySelector('.site-nav');
   var dropdowns = Array.from(nav.querySelectorAll('.nav-drop'));
   var hero = document.querySelector('.hero');
-  if (hero) {
-    var header = document.querySelector('.site-header');
+  var header = document.querySelector('.site-header');
+  if (header) {
     new ResizeObserver(function () {
-      hero.style.setProperty('--hero-nav-height', header.offsetHeight + 'px');
+      var height = header.offsetHeight + 'px';
+      document.documentElement.style.setProperty('--site-header-height', height);
+      if (hero) hero.style.setProperty('--hero-nav-height', height);
     }).observe(header);
   }
-  var hoverMenu = window.matchMedia('(min-width: 1001px) and (hover: hover) and (pointer: fine)');
+  var hoverMenu = window.matchMedia('(min-width: 1201px) and (hover: hover) and (pointer: fine)');
   var closeTimers = new WeakMap();
   function closeDropdown(dropdown) {
     window.clearTimeout(closeTimers.get(dropdown));

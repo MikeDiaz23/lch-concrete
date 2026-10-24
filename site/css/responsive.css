@@ -19,7 +19,7 @@ body.modern .footer-top p { max-width: 36ch; }
 body.modern .project-info { flex-wrap: wrap; }
 body.modern .hero-foot > * { min-width: 0; }
 /* Switch to the full-size menu before readable desktop links become cramped. */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   body.modern .nav-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: .75rem; min-height: 4.75rem; }
   body.modern .header-controls { order: 1; margin-left: auto; }
   body.modern .nav-toggle { display: block; }
