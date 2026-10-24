@@ -72,6 +72,8 @@ The hero collects the same inquiry fields as the existing forms and reuses their
 
 ## Single-card hero carousel
 
+Photo frames follow each source image's original aspect ratio. Images fill the available width with automatic height, and their rounded containers hug the photo. Keep these frames free of a fixed height or shared aspect ratio so wide photos do not gain empty bands and the full image remains visible.
+
 `site/js/hero-carousel.js` rotates one linked project card directly below the Residential & Commercial title and before the supporting copy. The four original project photos, labels, and service links remain. Only the active slide is visible or keyboard reachable. Previous and next chevrons, a counter, and a Play/Pause control sit below the card. Manual browsing pauses rotation until Play is selected. Automatic changes are not announced; manual changes update a polite status message.
 
 Rotation uses a six-second timeout and pauses on pointer hover, keyboard focus, document hiding, and when the carousel is offscreen. Reduced-motion preferences start the carousel paused and remove transition motion. With JavaScript unavailable, the first linked project remains visible and the controls stay hidden. The existing tile-sketch intro is retained for the first card only.
