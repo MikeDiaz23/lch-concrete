@@ -1,4 +1,5 @@
-/* A concrete surface confined to the dark homepage hero, fading into the page. */
+/* The same concrete material in both themes, fading into the page below. */
+.hero-concrete { position: relative; isolation: isolate; }
 html:not([data-theme='light']) .hero-concrete .hero-surface {
   mask-image: radial-gradient(ellipse at center, #000 45%, transparent 95%);
 }
@@ -11,7 +12,7 @@ html:not([data-theme='light']) .hero-concrete {
     radial-gradient(ellipse at 14% 12%, #8c8e8114, transparent 55%),
     linear-gradient(180deg, #41423f 0%, #343632 24%, #292b27 50%, #1d1f1b 73%, #121212 98%);
 }
-html:not([data-theme='light']) .hero-concrete::before {
+.hero-concrete::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -24,8 +25,8 @@ html:not([data-theme='light']) .hero-concrete::before {
   mask-image: linear-gradient(180deg, #000 0%, #000 48%, transparent 96%);
 }
 .concrete-perspective { display: none; }
-html:not([data-theme='light']) .hero-concrete.concrete-perspective-ready::before { content: none; }
-html:not([data-theme='light']) .hero-concrete .concrete-perspective {
+.hero-concrete.concrete-perspective-ready::before { content: none; }
+.hero-concrete .concrete-perspective {
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -36,4 +37,15 @@ html:not([data-theme='light']) .hero-concrete .concrete-perspective {
   mix-blend-mode: soft-light;
   opacity: .6;
   mask-image: linear-gradient(180deg, #000 0%, #000 48%, transparent 96%);
+}
+
+/* A pale grey wash keeps the pores and trowel marks quiet in daylight. */
+html[data-theme='light'] .hero-concrete {
+  background: linear-gradient(180deg, #f7f7f5 0%, #f4f5f2 48%, var(--paper) 98%);
+}
+html[data-theme='light'] .hero-concrete::before,
+html[data-theme='light'] .hero-concrete .concrete-perspective {
+  mix-blend-mode: multiply;
+  filter: grayscale(1);
+  opacity: .12;
 }

@@ -27,7 +27,6 @@
 
   function render() {
     frame = 0;
-    if (document.documentElement.dataset.theme === 'light') return;
     if (!raster) {
       if (!loading) {
         loading = true;
