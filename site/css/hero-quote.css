@@ -59,9 +59,27 @@ body.modern .hero-quote-panel .hero-quote-intro { font-size: 0.8125rem; line-hei
 /* One linked project photograph at a time, directly beneath the headline. */
 .hero-project-carousel { position: relative; width: min(100%, 390px); margin: 24px 0; }
 .hero-carousel-stage { padding: 10px; }
-.hero-quote-layout .hero-project-carousel .orbit-card { margin: 0; }
-/* Keep every project fully visible in a stable frame as the carousel grows. */
-.hero-quote-layout .hero-project-carousel .orbit-card img { height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: var(--panel); }
+.hero-quote-layout .hero-project-carousel .orbit-card { margin: 0; min-width: 0; scale: 1; }
+/* The frame controls layout; each photo fits inside it without setting its size. */
+.hero-project-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--panel);
+}
+.hero-quote-layout .hero-project-carousel .orbit-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+}
 .hero-quote-layout .hero-project-carousel .orbit-card span { font-size: 0.875rem; }
 .hero-carousel-slide { animation: hero-project-arrive .6s ease both; }
 .hero-carousel-controls { display: flex; align-items: center; justify-content: flex-start; gap: 8px; padding: 0 10px; margin-top: 8px; }
@@ -86,7 +104,6 @@ body.modern .hero-carousel-announcement { position: absolute; width: 1px; height
   .hero-quote-layout .studio-copy h1 .hero-title-craft { font-size: clamp(1.625rem, 2.6vw, 2rem); }
   .hero-project-carousel { width: 100%; margin: 22px 0 0; }
   .hero-carousel-stage { padding: 0; }
-  .hero-quote-layout .hero-project-carousel .orbit-card { scale: 1; }
   .hero-carousel-controls { padding: 0; margin-top: 12px; }
   body.modern .hero-quote-layout .studio-copy .hero-services { max-width: none; margin: 20px 0 22px !important; }
   .hero-quote-layout .studio-copy .actions { margin-top: 20px; }

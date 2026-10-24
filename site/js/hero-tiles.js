@@ -25,12 +25,12 @@
     var draft = document.createElement('span');
     draft.className = 'tile-draft';
     draft.setAttribute('aria-hidden', 'true');
-    var image = card.querySelector('img');
-    // Match the real image bounds so its arrival never changes the framing.
-    draft.style.top = image.offsetTop + 'px';
-    draft.style.left = image.offsetLeft + 'px';
-    draft.style.width = image.offsetWidth + 'px';
-    draft.style.height = image.offsetHeight + 'px';
+    var frame = card.querySelector('.hero-project-image') || card.querySelector('img');
+    // Keep the construction sketch aligned with the photo's containing frame.
+    draft.style.top = frame.offsetTop + 'px';
+    draft.style.left = frame.offsetLeft + 'px';
+    draft.style.width = frame.offsetWidth + 'px';
+    draft.style.height = frame.offsetHeight + 'px';
     var svg = document.createElementNS(namespace, 'svg');
     svg.setAttribute('viewBox', '0 0 100 100');
     svg.setAttribute('preserveAspectRatio', 'none');
