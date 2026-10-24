@@ -12,6 +12,7 @@ The previous typography audit found visible text at 9–13px on every page, incl
 | --- | --- | --- |
 | Paragraphs, inputs, buttons, project card labels | At least 16px | 24px |
 | Secondary labels, captions, footer, fine print | At least 14px | 20px |
+| Underlined chevron action links | At least 18px | 24px |
 | Desktop navigation | At least 15px | About 23px |
 
 These are project readability targets, not minimum font sizes prescribed by WCAG. Body text uses a 1.7 line height. Long reading passages are limited to roughly 70 characters per line. Text and controls can wrap, and form submit inputs have been replaced by buttons so their labels can wrap when enlarged. The transport still supports both control types and restores the correct label after success or failure.

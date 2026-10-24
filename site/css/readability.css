@@ -19,7 +19,7 @@ body.modern :is(.btn, input, select, textarea, .orbit-card > span:not(.tile-draf
 body.modern :is(.field input, .field select, .field textarea) { line-height: 1.5; padding: .75em; min-height: 3rem; }
 body.modern .field textarea { min-height: 7rem; height: auto; }
 body.modern .btn { min-height: 3rem; white-space: normal; }
-body.modern :is(.eyebrow, .hero-foot, .crumb, .text-link, .card-top, .additional-services,
+body.modern :is(.eyebrow, .hero-foot, .crumb, .card-top, .additional-services,
   .experience-tag span, .values, .project-info, .project-info span, .review-source,
   .review-stars, .contact-person, .contact-person span, .contact-person strong,
   .field label, .form-submit small, .footer-top h3, .footer-top p, .footer-top a,
@@ -27,6 +27,15 @@ body.modern :is(.eyebrow, .hero-foot, .crumb, .text-link, .card-top, .additional
   font-size: var(--font-secondary) !important;
   line-height: 1.6;
 }
+/* Give every underlined chevron action the same readable size. */
+body.modern .text-link {
+  font-size: max(1.125rem, var(--font-reading)) !important;
+  line-height: 1.5;
+  gap: .625em;
+  max-width: 100%;
+  white-space: normal;
+}
+body.modern .text-link::after { font-size: 1.25em; }
 body.modern .footer-top p { line-height: 1.7 !important; }
 body.modern .footer-top h3 { font-weight: 600; }
 body.modern .contact-email { font-size: var(--font-reading); }
