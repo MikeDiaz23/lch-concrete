@@ -44,8 +44,8 @@ body.modern .nav-toggle { font-size: .875rem; line-height: 1.5; min-height: 2.75
 body.modern .hero-carousel-controls { flex-wrap: wrap; }
 body.modern .hero-carousel-count { white-space: nowrap; }
 body.modern .hero-quote-panel .field.full { min-width: 0; }
-body.modern .form-submit small { max-width: 34ch; }
-body.modern .hero-quote-panel .form-submit small { max-width: none; }
+body.modern .form-submit small { max-width: 34ch; text-align: left; }
+body.modern :is(.hero-quote-panel, .area-quote) .form-submit small { max-width: none; }
 body.modern :is(.article-body, .quote-copy, .about-copy, .page-hero) p { max-width: 70ch; }
 body.modern .review-quote { line-height: 1.65; }
 @media (max-width: 420px) {
