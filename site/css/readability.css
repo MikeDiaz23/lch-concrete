@@ -36,6 +36,11 @@ body.modern .text-link {
   white-space: normal;
 }
 body.modern .text-link::after { font-size: 1.25em; }
+body.modern .service-area .area-row p a {
+  color: inherit;
+  text-decoration: underline !important;
+  text-underline-offset: .18em;
+}
 body.modern .footer-top p { line-height: 1.7 !important; }
 body.modern .footer-top h3 { font-weight: 600; }
 body.modern .contact-email { font-size: var(--font-reading); }
