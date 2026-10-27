@@ -5,7 +5,7 @@
   var storageKey = 'lch-theme';
   var saved;
   try { saved = window.localStorage.getItem(storageKey); } catch (error) {}
-  root.dataset.theme = saved === 'light' ? 'light' : 'dark';
+  root.dataset.theme = saved === 'dark' ? 'dark' : 'light';
 
   function updateSwitch() {
     var button = document.querySelector('.theme-toggle');
@@ -17,7 +17,7 @@
   }
 
   function setTheme(theme) {
-    root.dataset.theme = theme === 'light' ? 'light' : 'dark';
+    root.dataset.theme = theme === 'dark' ? 'dark' : 'light';
     updateSwitch();
     document.dispatchEvent(new CustomEvent('lch:themechange'));
   }
